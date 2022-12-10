@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="李昱熙">
+<meta name="description" content="An overview of R Workflow, which covers how to use R effectively all the way from importing data to analysis, and making use of Quarto for reproducible reporting.">
+
+<title>心血管笔记 - 第一篇</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../h.css">
+</head>
+
+<body class="floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">心血管笔记</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="dropdown-header">
+ 李昱熙（LI, Yuxi, MD）</li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">关于</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../post/">文章</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talk/">发言</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../bio.html">简历</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.zotero.org/groups/feh/items/q/Harrell">发表文章</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ditto504"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#computing-tools" id="toc-computing-tools" class="nav-link" data-scroll-target="#computing-tools">Computing Tools</a></li>
+  <li><a href="#the-research-process" id="toc-the-research-process" class="nav-link" data-scroll-target="#the-research-process">The Research Process</a></li>
+  <li><a href="#r-workflow" id="toc-r-workflow" class="nav-link" data-scroll-target="#r-workflow">R Workflow</a></li>
+  <li><a href="#report-formatting" id="toc-report-formatting" class="nav-link" data-scroll-target="#report-formatting">Report Formatting</a></li>
+  <li><a href="#initial-workflow" id="toc-initial-workflow" class="nav-link" data-scroll-target="#initial-workflow">Initial Workflow</a></li>
+  <li><a href="#missing-data" id="toc-missing-data" class="nav-link" data-scroll-target="#missing-data">Missing Data</a></li>
+  <li><a href="#data-checking" id="toc-data-checking" class="nav-link" data-scroll-target="#data-checking">Data Checking</a></li>
+  <li><a href="#data-overview" id="toc-data-overview" class="nav-link" data-scroll-target="#data-overview">Data Overview</a></li>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">Descriptive Statistics</a>
+  <ul class="collapse">
+  <li><a href="#longitudinal-data" id="toc-longitudinal-data" class="nav-link" data-scroll-target="#longitudinal-data">Longitudinal Data</a></li>
+  <li><a href="#describing-variable-interrelationships" id="toc-describing-variable-interrelationships" class="nav-link" data-scroll-target="#describing-variable-interrelationships">Describing Variable Interrelationships</a></li>
+  </ul></li>
+  <li><a href="#data-manipulation-and-aggregation" id="toc-data-manipulation-and-aggregation" class="nav-link" data-scroll-target="#data-manipulation-and-aggregation">Data Manipulation and Aggregation</a></li>
+  <li><a href="#graphics" id="toc-graphics" class="nav-link" data-scroll-target="#graphics">Graphics</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
+  <ul class="collapse">
+  <li><a href="#descriptive-analysis" id="toc-descriptive-analysis" class="nav-link" data-scroll-target="#descriptive-analysis">Descriptive Analysis</a></li>
+  <li><a href="#formal-analysis" id="toc-formal-analysis" class="nav-link" data-scroll-target="#formal-analysis">Formal Analysis</a></li>
+  </ul></li>
+  <li><a href="#caching-and-parallel-computing" id="toc-caching-and-parallel-computing" class="nav-link" data-scroll-target="#caching-and-parallel-computing">Caching and Parallel Computing</a></li>
+  <li><a href="#simulation" id="toc-simulation" class="nav-link" data-scroll-target="#simulation">Simulation</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">第一篇</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> 代码</button></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">2022</div>
+    <div class="quarto-category">data-science</div>
+    <div class="quarto-category">graphics</div>
+    <div class="quarto-category">r</div>
+    <div class="quarto-category">reproducible</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    An overview of R Workflow, which covers how to use R effectively all the way from importing data to analysis, and making use of <code>Quarto</code> for reproducible reporting.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">作者</div>
+  <div class="quarto-title-meta-heading">联系</div>
+  
+    <div class="quarto-title-meta-contents">
+    <a href="https://hbiostat.org">李昱熙</a> <a href="https://orcid.org/0000-0003-1556-598X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            北京大学第一医院<br>心内科
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">发布日期</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2022年6月25日</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level1 page-columns page-full">
+<h1>Overview</h1>
+<div class="page-columns page-full"><p>This article is an overview of the <a href="https://hbiostat.org/rflow">R Workflow electronic book</a>, which also contains an R primer and many examples with code, output, and graphics, with many of the graphs interactive. Here I outline analysis project workflow that I’ve found to be efficient in making reproducible research reports using R with <code>Rmarkdown</code> and now <code>Quarto</code>. I start by covering importing data, creating annotated analysis files, examining extent and patterns of missing data, and running descriptive statistics on them with goals of understanding the data and their quality and completeness. Functions in the <code>Hmisc</code> package are used to annotate data frames and data tables with labels and units of measurement, show metadata/data dictionaries, and to produce tabular and graphical statistical summaries. Efficient and clear methods of recoding variables are given. Several examples of processing and manipulating data using the <code>data.table</code> package are given, including some non-trivial longitudinal data computations. General principles of data analysis are briefly surveyed and some flexible bivariate and 3-variable analysis methods are presented with emphasis on staying close to the data while avoiding highly problematic categorization of continuous independent variables. Examples of diagramming the flow of exclusion of observations from analysis, caching results, parallel processing, and simulation are presented in the e-book. In the process several useful report writing methods are exemplified, including program-controlled creation of multiple report tabs. </p><div class="no-row-height column-margin column-container"><span class="aside"><a href="https://hbiostat.org/comment.html">Comments</a></span></div></div>
+<p>A video covering many parts of the first 13 chapters of <code>R Workflow</code> may be found <a href="https://youtu.be/ULWClhwrN2U">here</a>.</p>
+<p><code>R Workflow</code> is reviewed by Joseph Rickert <a href="https://rviews.rstudio.com/2022/06/17/frank-s-workflow">here</a>. See <a href="https://github.com/matloff/TidyverseSkeptic">this article</a> by Norm Matloff for many useful ideas about learning R.</p>
+</section>
+<section id="computing-tools" class="level1">
+<h1>Computing Tools</h1>
+<p>Key tools for doing modern, high-quality, reproducible analysis are <a href="https://www.r-project.org">R</a> for data import, processing, analysis, tables, and graphics, and <a href="https://quarto.org"><code>Quarto</code></a> for producing high-quality static and interactive reports. Users of <a href="https://rmarkdown.rstudio.com"><code>R Markdown</code></a> will find it easy to make small changes in syntax to convert to <code>Quarto</code>. Both <code>Quarto</code> and <code>R Markdown</code> rely on the R <a href="https://cran.r-project.org/web/packages/knitr"><code>knitr</code></a> package to process a blend of sentences and code to insert the tabular and graphical output of the code into the report.</p>
+</section>
+<section id="the-research-process" class="level1">
+<h1>The Research Process</h1>
+<p>An oversimplified summary of the research process is shown in the following diagram.</p>
+<div class="cell" data-fig-height="14">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart TD
+St[Research question] --&gt; M[Determine what&lt;br&gt;to measure&lt;br&gt;based on&lt;br&gt;subject matter&lt;br&gt;knowledge]
+M --&gt; Design[Design]
+Design --&gt; Exp[Experimental]
+Design --&gt; Obs[Observational]
+EM[Seek high-resolution&lt;br&gt;high-precison response variables]
+BV[Measure key influencers&lt;br&gt;of responses]
+Exp --&gt; EM --&gt; BV --&gt; Rsim[R simulations to&lt;br&gt;optimize design&lt;br&gt;estimate sample size&lt;br&gt;study performance of&lt;br&gt;analysis methods] --&gt; Ran[Randomization] --&gt; RR[Extra demand&lt;br&gt;for reproducibility]
+Obs --&gt; Comp[Between-Group Comparison]
+Obs --&gt; OO[Longitudinal and Other] --&gt; OM[Careful model&lt;br&gt;choices as with&lt;br&gt;comparative studies]
+Comp --&gt; Und[Understand factors used&lt;br&gt;in group assignment&lt;br&gt;decisions]
+Rat[See which data are&lt;br&gt;available only after&lt;br&gt;detailing which&lt;br&gt;measurements are needed&lt;br&gt;&lt;br&gt;Don't rationalize&lt;br&gt;adequacy of variables by&lt;br&gt;being biased by&lt;br&gt;what is available&lt;br&gt;&lt;br&gt;Confounding by indication&lt;br&gt;can be managed if indicators&lt;br&gt;are measured reliably]
+Und --&gt; MS[Make sure those factors are measured] --&gt; Rat
+Rat &amp; RR &amp; OM --&gt; Acq[Data acquisition] --&gt; PA[Principled efficient reproducible analysis&lt;br&gt;respecting information in raw data] --&gt; Rw[R Workflow]
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>R and <code>Quarto</code> play key roles at several points in this process</p>
+</section>
+<section id="r-workflow" class="level1 page-columns page-full">
+<h1>R Workflow</h1>
+<p>The R Workflow detailed at <a href="https://hbiostat.org/rflow">hbiostat.org/rflow</a> has many components depicted in the diagram that follows.</p>
+<div class="cell page-columns page-full" data-fig-width="13">
+<div class="cell-output-display column-page">
+<div>
+<p>
+
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-2">flowchart TD
+R[R Workflow] --&gt; Rformat[Report formatting]
+Rformat --&gt; Quarto[Quarto setup&lt;br&gt;&lt;br&gt;Using metadata in&lt;br&gt;report output&lt;br&gt;&lt;br&gt;Table and graph formatting]
+R --&gt; DI[Data import] --&gt; Annot[Annotate data&lt;br&gt;&lt;br&gt;View data dictionary&lt;br&gt;to assist coding]
+R --&gt; Do[Data overview] --&gt; F[Observation filtration&lt;br&gt;Missing data patterns&lt;br&gt;Data about data]
+R --&gt; P[Data processing] --&gt; DP[Recode&lt;br&gt;Transform&lt;br&gt;Reshape&lt;br&gt;Merge&lt;br&gt;Aggregate&lt;br&gt;Manipulate]
+R --&gt; Des[Descriptive statistics&lt;br&gt;Univariate or simple&lt;br&gt;stratification]
+R --&gt; An[Analysis&lt;br&gt;Stay close to data] --&gt; DA[Descriptive&lt;br&gt;&lt;br&gt;Avoid tables by using&lt;br&gt;nonparametric smoothers] &amp; FA[Formal]
+R --&gt; CP[Caching&lt;br&gt;Parallel computing&lt;br&gt;Simulation]
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>The above components are greatly facilitated y <code>Quarto</code>, the <a href="https://hbiostat.org/R/data.table"><code>data.table</code></a>, <a href="https://hbiostat.org/R/Hmisc"><code>Hmisc</code></a> and <a href="https://ggplot2.tidyverse.org"><code>ggplot2</code></a> packages. The importance of <code>data.table</code> to the R workflow cannot be overstated. <code>data.table</code> provides a unified, clear, concise, and cohesive grammar for manipulating data in a huge number of ways. And it does this without having <em>any</em> dependencies, which makes software updates much easier to manage over the life of long projects. The <code>R Workflow</code> book covers the most commonly needed data processing operations with many examples of the use of <code>data.table</code>.</p>
+<p><code>R Workflow</code> also makes extensive use of the Github repository <a href="https://github.com/harrelfe/rscripts/blob/master/reptools.r"><code>reptools</code></a> which contains a number of functions exemplified in the book.</p>
+</section>
+<section id="report-formatting" class="level1">
+<h1>Report Formatting</h1>
+<p>Formatting can be broken down into multiple areas:</p>
+<ul>
+<li>Formatting sentences, including math notation, making bullet and numbered lists, and cross-referencing</li>
+<li>Formatting tabular and graphical output</li>
+<li>Using metadata (i.e., variable labels and units of measurements) to enhance all kinds of output</li>
+<li>Using <code>Quarto</code> capabilities to extend formats using for example collapsible sections, tabbed sections, marginal notes, and graph sizing and captioning</li>
+</ul>
+</section>
+<section id="initial-workflow" class="level1">
+<h1>Initial Workflow</h1>
+<p>The major steps initially are</p>
+<ul>
+<li>importing csv files or binary files from other systems</li>
+<li>improving variable names</li>
+<li>annotating variables with labels and units</li>
+<li>viewing data dictionaries</li>
+<li>recoding</li>
+</ul>
+<p>Having a browser or <code>RStudio</code> window to view data dictionaries, especially to look up variable names and categorical values, is a major help in coding. <code>R Workflow</code> also shows how to import and process a large number of datasets in one step, without repetitive programming, and how to import metadata from an external source.</p>
+<p>For ease and clarity of coding it is highly suggested that variable labels be clear and not too long, and that variable labels be used to provide the full description. Variable labels can be looked up programmatically at any point during the analysis, for inclusion in tables and graph axes.</p>
+</section>
+<section id="missing-data" class="level1">
+<h1>Missing Data</h1>
+<p>Missing data is a major challenge for analysis. It is important to understand and to document the extent and patterns of missingness. The <code>Hmisc</code> package and <code>reptools</code> repository provides comprehensive looks at missingness including which variables tend to be missing on the same subjects. The multiple ways to summarizing missing data patterns are best reported as multiple tabs. The <code>reptools</code> repository makes it easy to create tabs programmatically, and this is used in the <code>reptools</code> <code>missChk</code> function exemplified in the book. <code>missChk</code> fits an ordinal logistic regression model to describe which types of subjects (based on variables with no <code>NA</code>s) tend to have more variables missing.</p>
+</section>
+<section id="data-checking" class="level1">
+<h1>Data Checking</h1>
+<p>Spike histograms often provide the best single way of checking validity of continuous variables. The <code>reptools</code> <code>dataChk</code> function allows the user to easily check ranges and cross-variable consistency by just providing a series of R expressions to run against the data table. <code>dataChk</code> summarizes the results in tabs, one tab per check, and includes in addition two overall summary tabs.</p>
+</section>
+<section id="data-overview" class="level1">
+<h1>Data Overview</h1>
+<p>It is valuable to know how the analysis sample came to be. Filtering of observations due to study inclusion/exclusion criteria and due to missing data is often documented with a <a href="http://www.consort-statement.org/consort-statement/flow-diagram">Consort diagram</a>. The <a href="https://cran.r-project.org/web/packages/consort"><code>consort</code> package</a> makes it easy to produce such diagrams using R data elements to insert denominators into diagram nodes. Alternatively, the <code>R/knitr/Quarto</code> combination along with the <a href="https://mermaid-js.github.io/mermaid"><code>mermaid</code></a> natural diagramming language can be used to make data-fed <code>consort</code>-like flowcharts among many other types of diagrams.</p>
+<p>Another type of data overview is based on computing various metrics on each variable. These metrics include</p>
+<ul>
+<li>number of distinct values</li>
+<li>number of <code>NA</code>s</li>
+<li>an information measure that for numeric variables compares the information in the variable to that in a completely continuous variable with no ties</li>
+<li>degree of asymmetry of the variable’s distribution</li>
+<li>modal variable value (most frequent value)</li>
+<li>frequency of modal value</li>
+<li>minimum frequency value</li>
+<li>frequency of that value</li>
+</ul>
+<p>The <code>reptools</code> <code>dataOverview</code> function computes all these metrics and plots some of them on a scatterplot where hover text will reveal details about the variable represented by the point.</p>
+</section>
+<section id="descriptive-statistics" class="level1">
+<h1>Descriptive Statistics</h1>
+<p>The best descriptive statistic for a continuous variable is a spike histogram with 100 or 200 bins. This will reveal bimodality, digit preference, outliers, and many other data features. Empirical cumulative distributions, not covered in <code>R Workflow</code>, are also excellent full-information summaries. The next best summary is an extended box plot showing the mean and multiple quantiles. Details and examples of extended box plots are covered in <code>R Workflow</code>.</p>
+<p>Tables can summarize frequency distributions of categorical variables, and measures of central tendency, selected quantiles, and measures of spread for continuous variables. When there is a truly discrete baseline variable one can stratify on it and compute the above types of summary measures. Tables fail completely when one attempts to stratify on a continuous baseline variable after grouping it into intervals. This is because categorization of continuous variables <a href="https://discourse.datamethods.org/t/categorizing-continuous-variables">is a bad idea</a>. Among other problems,</p>
+<ul>
+<li>categorization misses relationships occurring in an interval (this happens most often when an interval is wide such as an outer quartile)</li>
+<li>categorization loses information and statistical power because within-interval outcome heterogeneity is ignored and between-interval ordering is not utilized</li>
+<li>intervals are arbitrary, and changing interval boundaries can significantly change the apparent relationship</li>
+<li>with cutpoints one can easily manipulate results; one can find a set of cutpoints that results in a positive relationship and a different set <a href="https://www.tandfonline.com/doi/abs/10.1080/09332480.2006.10722771">that results in a negative relationship</a></li>
+</ul>
+<p>So tables are not good tools when describing one variable against a continuous variable. For that purpose, nonparametric smoothers or flexible parametric models are required. When the dependent variable Y is binary or continuous, the <code>loess</code> nonparametric smoother is an excellent default choice. For binary Y, <code>loess</code> estimates the probability that Y=1. For continuous Y, <code>loess</code> estimates the mean Y as a function of X. In general we need to estimate trends in more than the mean. For example we may want to estimate the median cholesterol as a function of age, the inter-quartile-range of cholesterol as a function of age, or 1- and 2-year incidence of disease vs.&nbsp;a continuous risk factor when censoring is present. A general-purpose way to get smoothed estimates against continuous X is though moving statistical summaries. The moving average is the oldest example. With moving statistics one computes any statistic of interest (mean, quantile, SD, Kaplan-Meier estimate) within a small window (of say <span class="math inline">\(\pm 15\)</span> observations), then moves the window up a few (say 1-5) observations and repeats the process. For each window the X value taken to represent that window is the mean X within the window. Then the moving estimates are smoothed with <code>loess</code> or the “super smoother”. All this is made easy with the <code>reptools</code> <code>movStats</code> function, and several examples are given in <code>R Workflow</code>.</p>
+<p>In randomized clinical trials, it is common to present “Table 1” in which descriptive statistics are stratified by assigned treatment. As imbalances in characteristics are almost by definition chance imbalances, Table 1 is <a href="https://discourse.datamethods.org/t/should-we-ignore-covariate-imbalance-and-stop-presenting-a-stratified-table-one-for-randomized-trials">counter-productive</a>. Why not present something that may reveal unexpected results that mean something? This is readily done by replacing Table 1 with a multi-panel plot showing how each of the baseline variables relates to the clinical trial’s main outcome variable. Some examples are presented in <code>R Workflow</code>. These examples include augmenting trend plots with spike histograms and extended box plots to how the marginal distribution of the baseline variable.</p>
+<section id="longitudinal-data" class="level2">
+<h2 class="anchored" data-anchor-id="longitudinal-data">Longitudinal Data</h2>
+<p><code>R Workflow</code> provides several examples of graphical descriptions of longitudinal data:</p>
+<ul>
+<li>representative curves for continuous Y</li>
+<li>three types of charts for longitudinal ordinal data
+<ul>
+<li>multiple event charts</li>
+<li>state transition proportions over all time periods</li>
+<li>state occupancy proportions over all time periods and by treatment</li>
+</ul></li>
+<li>event chart for continuous time-to-event data</li>
+<li>while often not longitudinal, adverse event charts for comparing safety profiles in clinical trials using a dot chart that includes confidence intervals for differences in proportions</li>
+</ul>
+</section>
+<section id="describing-variable-interrelationships" class="level2">
+<h2 class="anchored" data-anchor-id="describing-variable-interrelationships">Describing Variable Interrelationships</h2>
+<p>Variable clustering, using a similarity measure such as Spearman’s <span class="math inline">\(\rho\)</span> rank correlation, are useful for helping the analyst and the investigator to understand inter-relationships among variables. Results are presented as tree diagrams (dendrograms).</p>
+</section>
+</section>
+<section id="data-manipulation-and-aggregation" class="level1">
+<h1>Data Manipulation and Aggregation</h1>
+<p><code>R Workflow</code> has many examples, including the following</p>
+<ul>
+<li>use of <code>data.table</code></li>
+<li>subsetting data tables (or data frames) and analyzing the subset</li>
+<li>counting observations</li>
+<li>running separate analysis or just computing descriptive statistics by one or more stratification variables</li>
+<li>adding and changing variables</li>
+<li>selecting variables by patterns in their names</li>
+<li>deleting variables</li>
+<li>recoding variables in many ways</li>
+<li>table look-up</li>
+<li>automatically running all possible marginal summaries (e.g., subtotals)</li>
+<li>merging data tables</li>
+<li>reshaping data tables (e.g., wide to tall and thin)</li>
+<li>flexible manipulation of longitudinal data on subjects including “overlap joins” and “non-equi” joins</li>
+</ul>
+</section>
+<section id="graphics" class="level1">
+<h1>Graphics</h1>
+<p><a href="https://ggplot2.tidyverse.org">ggplot2</a> and <a href="https://plotly.com/r">plotly</a> play key rolls in graphical reporting. Several examples are given, and methods for pulling from data dictionaries to better annotate graphs are given (e.g., putting variable labels on axes, plus units of measurement in a smaller font). the <code>Hmisc</code> package <code>ggfreqScatter</code> function is demonstrated. This allows one to create scatterplots for any sample size, handling coincident points in an easy-to-understand way.</p>
+</section>
+<section id="analysis" class="level1 page-columns page-full">
+<h1>Analysis</h1>
+<div class="page-columns page-full"><p>Analysis should be driven by <a href="https://www.fharrell.com/post/principles">statistical principles</a> and be based to the extent possible on a statistical analysis plan to avoid double-dipping and too many “investigator degrees of freedom”, referred to as the <a href="http://www.stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf">garden of forking paths</a>. Analyses should be completely reproducible. They should use the raw data as much as possible, never dichotomizing continuous or ordinal variables. Don’t <a href="http://hbiostat.org/bbr/md/change.html">fall into the trap</a> of computing change from baseline in a parallel-group study.</p><div class="no-row-height column-margin column-container"><span class="aside">One exception: an ordinal predictor with few levels can be modeled as a categorical variable but using all possible dichotomizations (less one) with indicator variables.</span></div></div>
+<section id="descriptive-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-analysis">Descriptive Analysis</h2>
+<p>This can involve simple stratified estimation when baseline variables are truly categorical and one does not need to adjust for other variable. In general a model-based approach is better as it can adjust for any number of other variables while still providing descriptive results.</p>
+<p>To respect the nature of continuous variables, descriptive analyses can use the general “moving statistics in overlapping windows” approach outlined above, or if the mean is only of interested, <code>loess</code>.</p>
+<p>Recognize that the usual Table 1 is devoid of useful information, instead opting for useful outcome trends.</p>
+<p>Don’t make the mistake of interchanging the roles of independent and dependent variables. Many papers in the medical literature show a table of descriptive statistics where there are two columns: patients with and without an event. Not only is this presentation ignoring the timing of events, but it is using the outcome as the sole <em>independent variable</em>. Instead show nonparametric trends predicting the <em>outcome</em> instead of using the outcome to predict baseline variables. <code>R Workflow</code> has many such examples.</p>
+</section>
+<section id="formal-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="formal-analysis">Formal Analysis</h2>
+<p>Bayesian approaches are generally recommended, but whether using frequentist, Bayesian, or likelihoodist approaches one should use best statistical practices as detailed in <a href="https://hbiostat.org/rms">Regression Modeling Strategies</a> and <a href="https://hbiostat.org/bbr/md">Biostatistics for Biomedical Research</a>.</p>
+<p>Uncertainty intervals (UIs) such compatibility intervals, confidence intervals, Bayesian credible intervals, and Bayesian highest posterior density intervals are important tools in understanding effects of variables such as treatment. In randomized clinical trials (RCTs) an extremely common mistake, and one that is forced by bad statistical policies of journals such as NEJM, is to compute UIs for outcome tendencies for a single treatment arm in a parallel group study. As RCTs do not sample from a patient population but rely on convenience sampling, there is no useful inference that one can draw from a single group UI. RCTs are interesting because of what happens <em>after</em> patient enrollment: investigator-controlled randomization to a treatment. The only pertinent UIs are for <em>differences</em> in outcomes.</p>
+<p>When the UI is approximately symmetric one can have UIs on the same graphs as treatment-specific point estimates by using “half confidence intervals”. In the frequentist domain, these intervals have the property that the point estimates touch the interval if and only if a statistical test of equality is not rejected at a certain statistical level. <code>R Workflow</code> has numerous examples, showing special value of this approach when comparing two survival curves.</p>
+</section>
+</section>
+<section id="caching-and-parallel-computing" class="level1">
+<h1>Caching and Parallel Computing</h1>
+<p><code>knitr</code> used by <code>R Markdown</code> and <code>Quarto</code> provides an automatic caching system to avoid having to run time-consuming steps when making only cosmetic changes to a report. But often one wants to take control of the caching process and the accounting for software and data dependencies in the current step. The <code>runifChanged</code> function makes this easy. Another way to save time is with the use of multiple processors on your machine. <code>R Workflow</code> shows simple examples of both caching and parallel computing.</p>
+</section>
+<section id="simulation" class="level1">
+<h1>Simulation</h1>
+<p>Simulations are used for many reasons including estimation of Bayesian and frequentist power for a study design, trying different designs to find an optimum one, and assessing the performance of a statistical analysis procedure. To minimize coding and be computationally efficient, multi-dimensional arrays can be used when there are many combinations of parameters/conditions to study. For example if one were varying the sample size, the number of covariates, the variance of Y, and a treatment effect to detect, one can set up a 4-dimensional array, run four nested <code>for</code> statements, and stuff results into the appropriate element of the array. For charting results (using for example a <code>ggplot2</code> dot chart) it is easy to string out the 4-dimensional array into a tall and thin dataset where there is a variable for each dimension. <code>R Workflow</code> provides a full example, along with another method using a data table instead of an array.</p>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">引文</h2><div><div class="quarto-appendix-secondary-label">BibTeX</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{李昱熙2022,
+  author = {李昱熙},
+  editor = {},
+  title = {第一篇},
+  date = {2022-06-25},
+  url = {https://fharrell.com/post/2022-12-06-start},
+  langid = {zh}
+}
+</code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">请引用这项工作：</div><div id="ref-李昱熙2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+李昱熙. 2022. <span>“第一篇.”</span> June 25, 2022. <a href="https://fharrell.com/post/2022-12-06-start">https://fharrell.com/post/2022-12-06-start</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "已复制");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/fharrell\.com/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="ditto504/blogcomments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">源代码</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 第一篇</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> zh</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: 李昱熙</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0003-1556-598X</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    url: https://hbiostat.org</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation: 北京大学第一医院&lt;br&gt;心内科</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2022-06-25</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [2022, data-science, graphics, r, reproducible]</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "An overview of R Workflow, which covers how to use R effectively all the way from importing data to analysis, and making use of `Quarto` for reproducible reporting."</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu"># Overview</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>This article is an overview of the <span class="co">[</span><span class="ot">R Workflow electronic book</span><span class="co">](https://hbiostat.org/rflow)</span>, which also contains an R primer and many examples with code, output, and graphics, with many of the graphs interactive.  Here I  outline analysis project workflow that I've found to be efficient in making reproducible research reports using R with <span class="in">`Rmarkdown`</span> and now <span class="in">`Quarto`</span>.  I start by covering importing data, creating annotated analysis files, examining extent and patterns of missing data, and running descriptive statistics on them with goals of understanding the data and their quality and completeness.  Functions in the <span class="in">`Hmisc`</span> package are used to annotate data frames and data tables with labels and units of measurement, show metadata/data dictionaries, and to produce tabular and graphical statistical summaries.  Efficient and clear methods of recoding variables are given.  Several examples of processing and manipulating data using the <span class="in">`data.table`</span> package are given, including some non-trivial longitudinal data computations.  General principles of data analysis are briefly surveyed and some flexible bivariate and 3-variable analysis methods are presented with emphasis on staying close to the data while avoiding highly problematic categorization of continuous independent variables.  Examples of diagramming the flow of exclusion of observations from analysis, caching results, parallel processing, and simulation are presented in the e-book.  In the process several useful report writing methods are exemplified, including program-controlled creation of multiple report tabs.   [<span class="co">[</span><span class="ot">Comments</span><span class="co">](https://hbiostat.org/comment.html)</span>]{.aside}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>A video covering many parts of the first 13 chapters of <span class="in">`R Workflow`</span> may be found <span class="co">[</span><span class="ot">here</span><span class="co">](https://youtu.be/ULWClhwrN2U)</span>.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">`R Workflow`</span> is reviewed by Joseph Rickert <span class="co">[</span><span class="ot">here</span><span class="co">](https://rviews.rstudio.com/2022/06/17/frank-s-workflow)</span>.  See <span class="co">[</span><span class="ot">this article</span><span class="co">](https://github.com/matloff/TidyverseSkeptic)</span> by Norm Matloff for many useful ideas about learning R.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Computing Tools</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Key tools for doing modern, high-quality, reproducible analysis are <span class="co">[</span><span class="ot">R</span><span class="co">](https://www.r-project.org)</span> for data import, processing, analysis, tables, and graphics, and <span class="co">[</span><span class="ot">`Quarto`</span><span class="co">](https://quarto.org)</span> for producing high-quality static and interactive reports.  Users of <span class="co">[</span><span class="ot">`R Markdown`</span><span class="co">](https://rmarkdown.rstudio.com)</span> will find it easy to make small changes in syntax to convert to <span class="in">`Quarto`</span>.  Both <span class="in">`Quarto`</span> and <span class="in">`R Markdown`</span> rely on the R <span class="co">[</span><span class="ot">`knitr`</span><span class="co">](https://cran.r-project.org/web/packages/knitr)</span> package to process a blend of sentences and code to insert the tabular and graphical output of the code into the report.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Research Process</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>An oversimplified summary of the research process is shown in the following diagram.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>%%| fig-height: <span class="dv">14</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>flowchart TD</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>St[Research question] --&gt; M[Determine what&lt;br&gt;to measure&lt;br&gt;based on&lt;br&gt;subject matter&lt;br&gt;knowledge]</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>M --&gt; Design[Design]</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Design --&gt; Exp[Experimental]</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Design --&gt; Obs[Observational]</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>EM[Seek high<span class="ot">-r</span>esolution&lt;br&gt;high<span class="ot">-p</span>recison response variables]</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>BV[Measure key influencers&lt;br&gt;of responses]</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>Exp --&gt; EM --&gt; BV --&gt; Rsim[R simulations to&lt;br&gt;optimize design&lt;br&gt;estimate sample size&lt;br&gt;<span class="fu">study</span> performance of&lt;br&gt;analysis methods] --&gt; Ran[Randomization] --&gt; RR[Extra demand&lt;br&gt;<span class="kw">for</span> reproducibility]</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>Obs --&gt; Comp[Between-Group Comparison]</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Obs --&gt; OO[Longitudinal <span class="ot">and</span> Other] --&gt; OM[Careful model&lt;br&gt;choices as with&lt;br&gt;comparative studies]</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Comp --&gt; Und[Understand factors used&lt;br&gt;in group assignment&lt;br&gt;decisions]</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Rat[See which data are&lt;br&gt;available only after&lt;br&gt;detailing which&lt;br&gt;measurements are needed&lt;br&gt;&lt;br&gt;Don<span class="ot">'</span><span class="ss">t rationalize&lt;br&gt;adequacy of variables by&lt;br&gt;being biased by&lt;br&gt;what is available&lt;br&gt;&lt;br&gt;Confounding by indication&lt;br&gt;can be managed if indicators&lt;br&gt;are measured reliably]</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">Und --&gt; MS[Make sure those factors are measured] --&gt; Rat</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">Rat &amp; RR &amp; OM --&gt; Acq[Data acquisition] --&gt; PA[Principled efficient reproducible analysis&lt;br&gt;respecting information in raw data] --&gt; Rw[R Workflow]</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">R and `Quarto` play key roles at several points in this process</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss"># R Workflow</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">The R Workflow detailed at [hbiostat.org/rflow](https://hbiostat.org/rflow) has many components depicted in the diagram that follows.</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">%%| column: page</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">%%| fig-width: 13</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">flowchart TD</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">R[R Workflow] --&gt; Rformat[Report formatting]</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">Rformat --&gt; Quarto[Quarto setup&lt;br&gt;&lt;br&gt;Using metadata in&lt;br&gt;report output&lt;br&gt;&lt;br&gt;Table and graph formatting]</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">R --&gt; DI[Data import] --&gt; Annot[Annotate data&lt;br&gt;&lt;br&gt;View data dictionary&lt;br&gt;to assist coding]</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">R --&gt; Do[Data overview] --&gt; F[Observation filtration&lt;br&gt;Missing data patterns&lt;br&gt;Data about data]</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">R --&gt; P[Data processing] --&gt; DP[Recode&lt;br&gt;Transform&lt;br&gt;Reshape&lt;br&gt;Merge&lt;br&gt;Aggregate&lt;br&gt;Manipulate]</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">R --&gt; Des[Descriptive statistics&lt;br&gt;Univariate or simple&lt;br&gt;stratification]</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">R --&gt; An[Analysis&lt;br&gt;Stay close to data] --&gt; DA[Descriptive&lt;br&gt;&lt;br&gt;Avoid tables by using&lt;br&gt;nonparametric smoothers] &amp; FA[Formal]</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">R --&gt; CP[Caching&lt;br&gt;Parallel computing&lt;br&gt;Simulation]</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">The above components are greatly facilitated y `Quarto`, the [`data.table`](https://hbiostat.org/R/data.table), [`Hmisc`](https://hbiostat.org/R/Hmisc) and [`ggplot2`](https://ggplot2.tidyverse.org) packages.  The importance of `data.table` to the R workflow cannot be overstated.  `data.table` provides a unified, clear, concise, and cohesive grammar for manipulating data in a huge number of ways.  And it does this without having _any_ dependencies, which makes software updates much easier to manage over the life of long projects.  The `R Workflow` book covers the most commonly needed data processing operations with many examples of the use of `data.table`.</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">`R Workflow` also makes extensive use of the Github repository [`reptools`](https://github.com/harrelfe/rscripts/blob/master/reptools.r) which contains a number of functions exemplified in the book.</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss"># Report Formatting</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">Formatting can be broken down into multiple areas:</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">* Formatting sentences, including math notation, making bullet and numbered lists, and cross-referencing</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">* Formatting tabular and graphical output</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">* Using metadata (i.e., variable labels and units of measurements) to enhance all kinds of output</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">* Using `Quarto` capabilities to extend formats using for example collapsible sections, tabbed sections, marginal notes, and graph sizing and captioning</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss"># Initial Workflow</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">The major steps initially are</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">* importing csv files or binary files from other systems</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">* improving variable names</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">* annotating variables with labels and units</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">* viewing data dictionaries</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">* recoding</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">Having a browser or `RStudio` window to view data dictionaries, especially to look up variable names and categorical values, is a major help in coding.</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">`R Workflow` also shows how to import and process a large number of datasets in one step, without repetitive programming, and how to import metadata from an external source.</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">For ease and clarity of coding it is highly suggested that variable labels be clear and not too long, and that variable labels be used to provide the full description.  Variable labels can be looked up programmatically at any point during the analysis, for inclusion in tables and graph axes.</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss"># Missing Data</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">Missing data is a major challenge for analysis.  It is important to understand and to document the extent and patterns of missingness.  The `Hmisc` package and `reptools` repository provides comprehensive looks at missingness including which variables tend to be missing on the same subjects.  The multiple ways to summarizing missing data patterns are best reported as multiple tabs.  The `reptools` repository makes it easy to create tabs programmatically, and this is used in the `reptools` `missChk` function exemplified in the book.  `missChk` fits an ordinal logistic regression model to describe which types of subjects (based on variables with no `NA`s) tend to have more variables missing.</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss"># Data Checking</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">Spike histograms often provide the best single way of checking validity of continuous variables.  The `reptools` `dataChk` function allows the user to easily check ranges and cross-variable consistency by just providing a series of R expressions to run against the data table.  `dataChk` summarizes the results in tabs, one tab per check, and includes in addition two overall summary tabs.</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss"># Data Overview</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">It is valuable to know how the analysis sample came to be.  Filtering of observations due to study inclusion/exclusion criteria and due to missing data is often documented with a [Consort diagram](http://www.consort-statement.org/consort-statement/flow-diagram).  The [`consort` package](https://cran.r-project.org/web/packages/consort) makes it easy to produce such diagrams using R data elements to insert denominators into diagram nodes.  Alternatively, the `R/knitr/Quarto` combination along with the [`mermaid`](https://mermaid-js.github.io/mermaid) natural diagramming language can be used to make data-fed `consort`-like flowcharts among many other types of diagrams.</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">Another type of data overview is based on computing various metrics on each variable.  These metrics include</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">* number of distinct values</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">* number of `NA`s</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">* an information measure that for numeric variables compares the information in the variable to that in a completely continuous variable with no ties</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="ss">* degree of asymmetry of the variable</span><span class="ot">'</span>s distribution</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> modal variable value (most frequent value)</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> frequency of modal value</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> minimum frequency value</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> frequency of that value</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>The <span class="ot">`</span><span class="st">reptools</span><span class="ot">`</span> <span class="ot">`</span><span class="st">dataOverview</span><span class="ot">`</span> function computes all these metrics <span class="ot">and</span> plots some of them on a scatterplot where hover text will reveal details about the variable represented by the point.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="co"># Descriptive Statistics</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>The best descriptive statistic <span class="kw">for</span> a continuous variable is a spike histogram with <span class="dv">100</span> <span class="ot">or</span> <span class="dv">200</span> bins.  This will reveal bimodality, digit preference, outliers, <span class="ot">and</span> many other data features.  Empirical cumulative distributions, <span class="ot">not</span> covered in <span class="ot">`</span><span class="st">R Workflow</span><span class="ot">`</span>, are also excellent full-information summaries.  The <span class="kw">next</span> best summary is an extended box plot showing the mean <span class="ot">and</span> multiple quantiles.  Details <span class="ot">and</span> examples of extended box plots are covered in <span class="ot">`</span><span class="st">R Workflow</span><span class="ot">`</span>.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>Tables can summarize frequency distributions of categorical variables, <span class="ot">and</span> measures of central tendency, selected quantiles, <span class="ot">and</span> measures of spread <span class="kw">for</span> continuous variables.  When there is a truly discrete baseline variable one can stratify on it <span class="ot">and</span> compute the above types of summary measures.  Tables fail completely <span class="kw">when</span> one attempts to stratify on a continuous baseline variable after grouping it into intervals.  This is because categorization of continuous variables [is a bad idea](https://discourse.datamethods.org/t/categorizing<span class="ot">-c</span>ontinuous-variables).  Among other problems,</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> categorization misses relationships occurring in an interval (this happens most often <span class="kw">when</span> an interval is wide such as an outer quartile)</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> categorization loses information <span class="ot">and</span> statistical power because within-interval outcome heterogeneity is ignored <span class="ot">and</span> between-interval ordering is <span class="ot">not</span> utilized</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> intervals are arbitrary, <span class="ot">and</span> changing interval boundaries can significantly change the apparent relationship</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ot">*</span> with cutpoints one can easily manipulate results; one can find a set of cutpoints that results in a positive relationship <span class="ot">and</span> a different set [that results in a negative relationship](https://www.tandfonline.com/doi/<span class="fu">abs</span><span class="ot">/10.1080/</span><span class="fl">09332480.2006</span>.<span class="dv">10722771</span>)</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>So tables are <span class="ot">not</span> good tools <span class="kw">when</span> describing one variable against a continuous variable.  For that purpose, nonparametric smoothers <span class="ot">or</span> flexible parametric models are required.  When the dependent variable Y is binary <span class="ot">or</span> continuous, the <span class="ot">`</span><span class="st">loess</span><span class="ot">`</span> nonparametric smoother is an excellent <span class="kw">default</span> choice.  For binary Y, <span class="ot">`</span><span class="st">loess</span><span class="ot">`</span> estimates the probability that Y=<span class="dv">1</span>.  For continuous Y, <span class="ot">`</span><span class="st">loess</span><span class="ot">`</span> estimates the mean Y as a function of X.  In general we need to estimate trends in more than the mean.  For example we may want to estimate the median cholesterol as a function of age, the inter-quartile<span class="ot">-r</span>ange of cholesterol as a function of age, <span class="ot">or</span> <span class="dv">1</span>- <span class="ot">and</span> <span class="dv">2</span>-year incidence of disease vs. a continuous risk factor <span class="kw">when</span> censoring is present.  A general<span class="ot">-p</span>urpose way to get smoothed estimates against continuous X is though moving statistical summaries.  The moving average is the oldest example.  With moving statistics one computes any statistic of interest (mean, quantile, SD, Kaplan<span class="ot">-M</span>eier estimate) within a small window (of <span class="fu">say</span> <span class="wa">$\</span><span class="dt">pm</span> <span class="dv">15</span>$ observations), then moves the window up a few (<span class="fu">say</span> <span class="dv">1-5</span>) observations <span class="ot">and</span> repeats the process.  For <span class="kw">each</span> window the X value taken to represent that window is the mean X within the window.  Then the moving estimates are smoothed with <span class="ot">`</span><span class="st">loess</span><span class="ot">`</span> <span class="ot">or</span> the <span class="ot">"</span><span class="st">super smoother</span><span class="ot">"</span>.  All this is made easy with the <span class="ot">`</span><span class="st">reptools</span><span class="ot">`</span> <span class="ot">`</span><span class="st">movStats</span><span class="ot">`</span> function, <span class="ot">and</span> several examples are <span class="kw">given</span> in <span class="ot">`</span><span class="st">R Workflow</span><span class="ot">`</span>.</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>In randomized clinical trials, it is common to present <span class="ot">"</span><span class="st">Table 1</span><span class="ot">"</span> in which descriptive statistics are stratified by assigned treatment.  As imbalances in characteristics are almost by definition chance imbalances, Table <span class="dv">1</span> is [counter<span class="ot">-p</span>roductive](https://discourse.datamethods.org/t/should<span class="ot">-w</span>e-ignore<span class="ot">-c</span>ovariate-imbalance-<span class="ot">and-s</span>top<span class="ot">-p</span>resenting-a<span class="ot">-s</span>tratified<span class="ot">-t</span>able<span class="ot">-o</span>ne<span class="ot">-f</span>or<span class="ot">-r</span>andomized<span class="ot">-t</span>rials).  Why <span class="ot">not</span> present something that may reveal unexpected results that mean something?  This is readily done by replacing Table <span class="dv">1</span> with a multi<span class="ot">-p</span>anel plot showing how <span class="kw">each</span> of the baseline variables relates to the clinical trial<span class="ot">'</span><span class="ss">s main outcome variable.  Some examples are presented in `R Workflow`.  These examples include augmenting trend plots with spike histograms and extended box plots to how the marginal distribution of the baseline variable.</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">## Longitudinal Data</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">`R Workflow` provides several examples of graphical descriptions of longitudinal data:</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">* representative curves for continuous Y</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">* three types of charts for longitudinal ordinal data</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">  + multiple event charts</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">  + state transition proportions over all time periods</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="ss">  + state occupancy proportions over all time periods and by treatment</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">* event chart for continuous time-to-event data</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="ss">* while often not longitudinal, adverse event charts for comparing safety profiles in clinical trials using a dot chart that includes confidence intervals for differences in proportions</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">## Describing Variable Interrelationships</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="ss">Variable clustering, using a similarity measure such as Spearman</span><span class="ot">'s</span> <span class="ot">$\rho$</span><span class="st"> rank correlation, are useful for helping the analyst and the investigator to understand inter-relationships among variables.  Results are presented as tree diagrams (dendrograms).</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="st"># Data Manipulation and Aggregation</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="st">`R Workflow` has many examples, including the following</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="st">* use of `data.table`</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="st">* subsetting data tables (or data frames) and analyzing the subset</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="st">* counting observations</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="st">* running separate analysis or just computing descriptive statistics by one or more stratification variables</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="st">* adding and changing variables</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="st">* selecting variables by patterns in their names</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="st">* deleting variables</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="st">* recoding variables in many ways</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="st">* table look-up</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="st">* automatically running all possible marginal summaries (e.g., subtotals)</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="st">* merging data tables</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="st">* reshaping data tables (e.g., wide to tall and thin)</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="st">* flexible manipulation of longitudinal data on subjects including "overlap joins" and "non-equi" joins</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="st"># Graphics</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="st">[ggplot2](https://ggplot2.tidyverse.org) and [plotly](https://plotly.com/r) play key rolls in graphical reporting.  Several examples are given, and methods for pulling from data dictionaries to better annotate graphs are given (e.g., putting variable labels on axes, plus units of measurement in a smaller font).  the `Hmisc` package `ggfreqScatter` function is demonstrated.  This allows one to create scatterplots for any sample size, handling coincident points in an easy-to-understand way.</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="st"># Analysis</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="st">Analysis should be driven by [statistical principles](https://www.fharrell.com/post/principles) and be based to the extent possible on a statistical analysis plan to avoid double-dipping and too many "investigator degrees of freedom", referred to as the [garden of forking paths](http://www.stat.columbia.edu/~gelman/research/published/ForkingPaths.pdf).  Analyses should be completely reproducible.  They should use the raw data as much as possible, never dichotomizing continuous or ordinal variables.[One exception: an ordinal predictor with few levels can be modeled as a categorical variable but using all possible dichotomizations (less one) with indicator variables.]{.aside}  Don't [fall into the trap](http://hbiostat.org/bbr/md/change.html) of computing change from baseline in a parallel-group study.</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="st">## Descriptive Analysis</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="st">This can involve simple stratified estimation when baseline variables are truly categorical and one does not need to adjust for other variable.  In general a model-based approach is better as it can adjust for any number of other variables while still providing descriptive results.</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="st">To respect the nature of continuous variables, descriptive analyses can use the general "moving statistics in overlapping windows" approach outlined above, or if the mean is only of interested, `loess`.</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="st">Recognize that the usual Table 1 is devoid of useful information, instead opting for useful outcome trends.</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="st">Don't make the mistake of interchanging the roles of independent and dependent variables.  Many papers in the medical literature show a table of descriptive statistics where there are two columns: patients with and without an event.  Not only is this presentation ignoring the timing of events, but it is using the outcome as the sole _independent variable_.  Instead show nonparametric trends predicting the _outcome_ instead of using the outcome to predict baseline variables.  `R Workflow` has many such examples.</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="st">## Formal Analysis</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="st">Bayesian approaches are generally recommended, but whether using frequentist, Bayesian, or likelihoodist approaches one should use best statistical practices as detailed in [Regression Modeling Strategies](https://hbiostat.org/rms) and [Biostatistics for Biomedical Research](https://hbiostat.org/bbr/md).</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="st">Uncertainty intervals (UIs) such compatibility intervals, confidence intervals, Bayesian credible intervals, and Bayesian highest posterior density intervals are important tools in understanding effects of variables such as treatment.  In randomized clinical trials (RCTs) an extremely common mistake, and one that is forced by bad statistical policies of journals such as NEJM, is to compute UIs for outcome tendencies for a single treatment arm in a parallel group study.  As RCTs do not sample from a patient population but rely on convenience sampling, there is no useful inference that one can draw from a single group UI.  RCTs are interesting because of what happens _after_ patient enrollment: investigator-controlled randomization to a treatment.  The only pertinent UIs are for _differences_ in outcomes.</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="st">When the UI is approximately symmetric one can have UIs on the same graphs as treatment-specific point estimates by using "half confidence intervals".  In the frequentist domain, these intervals have the property that the point estimates touch the interval if and only if a statistical test of equality is not rejected at a certain statistical level.  `R Workflow` has numerous examples, showing special value of this approach when comparing two survival curves.</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="st"># Caching and Parallel Computing</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="st">`knitr` used by `R Markdown` and `Quarto` provides an automatic caching system to avoid having to run time-consuming steps when making only cosmetic changes to a report.  But often one wants to take control of the caching process and the accounting for software and data dependencies in the current step.  The `runifChanged` function makes this easy.  Another way to save time is with the use of multiple processors on your machine.  `R Workflow` shows simple examples of both caching and parallel computing.</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="st"># Simulation</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="st">Simulations are used for many reasons including estimation of Bayesian and frequentist power for a study design, trying different designs to find an optimum one, and assessing the performance of a statistical analysis procedure.  To minimize coding and be computationally efficient, multi-dimensional arrays can be used when there are many combinations of parameters/conditions to study.  For example if one were varying the sample size, the number of covariates, the variance of Y, and a treatment effect to detect, one can set up a 4-dimensional array, run four nested `for` statements, and stuff results into the appropriate element of the array.  For charting results (using for example a `ggplot2` dot chart) it is easy to string out the 4-dimensional array into a tall and thin dataset where there is a variable for each dimension.  `R Workflow` provides a full example, along with another method using a data table instead of an array.</span></span>
+</code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog made with <a href="https://quarto.org/">Quarto</a>, by LI, Yuxi, based on Fharrell. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ditto504/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:liyuxi@pku.edu.cn">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

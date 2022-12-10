@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/post/2022-12-06-start/index.html",
+      "/post/2021-07-12-beijing-teaching-competition/index.html"
+    ]
+  },
+  {
+    "listing": "/post/index.html",
+    "items": [
+      "/post/2022-12-06-start/index.html",
+      "/post/2021-07-12-beijing-teaching-competition/index.html"
+    ]
+  }
+]

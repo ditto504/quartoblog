@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "心血管笔记",
+    "section": "",
+    "text": "日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年6月25日\n\n\n第一篇\n\n\n李昱熙\n\n\n\n\n2021年7月12日\n\n\n北京市讲课比赛有感\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
+  },
+  {
+    "objectID": "index.html#发言",
+    "href": "index.html#发言",
+    "title": "心血管笔记",
+    "section": "发言",
+    "text": "发言\n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n\n\n无匹配项"
+  },
+  {
+    "objectID": "post/2022-12-06-start/index.html",
+    "href": "post/2022-12-06-start/index.html",
+    "title": "第一篇",
+    "section": "",
+    "text": "This article is an overview of the R Workflow electronic book, which also contains an R primer and many examples with code, output, and graphics, with many of the graphs interactive. Here I outline analysis project workflow that I’ve found to be efficient in making reproducible research reports using R with Rmarkdown and now Quarto. I start by covering importing data, creating annotated analysis files, examining extent and patterns of missing data, and running descriptive statistics on them with goals of understanding the data and their quality and completeness. Functions in the Hmisc package are used to annotate data frames and data tables with labels and units of measurement, show metadata/data dictionaries, and to produce tabular and graphical statistical summaries. Efficient and clear methods of recoding variables are given. Several examples of processing and manipulating data using the data.table package are given, including some non-trivial longitudinal data computations. General principles of data analysis are briefly surveyed and some flexible bivariate and 3-variable analysis methods are presented with emphasis on staying close to the data while avoiding highly problematic categorization of continuous independent variables. Examples of diagramming the flow of exclusion of observations from analysis, caching results, parallel processing, and simulation are presented in the e-book. In the process several useful report writing methods are exemplified, including program-controlled creation of multiple report tabs. Comments\nA video covering many parts of the first 13 chapters of R Workflow may be found here.\nR Workflow is reviewed by Joseph Rickert here. See this article by Norm Matloff for many useful ideas about learning R."
+  },
+  {
+    "objectID": "post/2022-12-06-start/index.html#longitudinal-data",
+    "href": "post/2022-12-06-start/index.html#longitudinal-data",
+    "title": "第一篇",
+    "section": "Longitudinal Data",
+    "text": "Longitudinal Data\nR Workflow provides several examples of graphical descriptions of longitudinal data:\n\nrepresentative curves for continuous Y\nthree types of charts for longitudinal ordinal data\n\nmultiple event charts\nstate transition proportions over all time periods\nstate occupancy proportions over all time periods and by treatment\n\nevent chart for continuous time-to-event data\nwhile often not longitudinal, adverse event charts for comparing safety profiles in clinical trials using a dot chart that includes confidence intervals for differences in proportions"
+  },
+  {
+    "objectID": "post/2022-12-06-start/index.html#describing-variable-interrelationships",
+    "href": "post/2022-12-06-start/index.html#describing-variable-interrelationships",
+    "title": "第一篇",
+    "section": "Describing Variable Interrelationships",
+    "text": "Describing Variable Interrelationships\nVariable clustering, using a similarity measure such as Spearman’s \\(\\rho\\) rank correlation, are useful for helping the analyst and the investigator to understand inter-relationships among variables. Results are presented as tree diagrams (dendrograms)."
+  },
+  {
+    "objectID": "post/2022-12-06-start/index.html#descriptive-analysis",
+    "href": "post/2022-12-06-start/index.html#descriptive-analysis",
+    "title": "第一篇",
+    "section": "Descriptive Analysis",
+    "text": "Descriptive Analysis\nThis can involve simple stratified estimation when baseline variables are truly categorical and one does not need to adjust for other variable. In general a model-based approach is better as it can adjust for any number of other variables while still providing descriptive results.\nTo respect the nature of continuous variables, descriptive analyses can use the general “moving statistics in overlapping windows” approach outlined above, or if the mean is only of interested, loess.\nRecognize that the usual Table 1 is devoid of useful information, instead opting for useful outcome trends.\nDon’t make the mistake of interchanging the roles of independent and dependent variables. Many papers in the medical literature show a table of descriptive statistics where there are two columns: patients with and without an event. Not only is this presentation ignoring the timing of events, but it is using the outcome as the sole independent variable. Instead show nonparametric trends predicting the outcome instead of using the outcome to predict baseline variables. R Workflow has many such examples."
+  },
+  {
+    "objectID": "post/2022-12-06-start/index.html#formal-analysis",
+    "href": "post/2022-12-06-start/index.html#formal-analysis",
+    "title": "第一篇",
+    "section": "Formal Analysis",
+    "text": "Formal Analysis\nBayesian approaches are generally recommended, but whether using frequentist, Bayesian, or likelihoodist approaches one should use best statistical practices as detailed in Regression Modeling Strategies and Biostatistics for Biomedical Research.\nUncertainty intervals (UIs) such compatibility intervals, confidence intervals, Bayesian credible intervals, and Bayesian highest posterior density intervals are important tools in understanding effects of variables such as treatment. In randomized clinical trials (RCTs) an extremely common mistake, and one that is forced by bad statistical policies of journals such as NEJM, is to compute UIs for outcome tendencies for a single treatment arm in a parallel group study. As RCTs do not sample from a patient population but rely on convenience sampling, there is no useful inference that one can draw from a single group UI. RCTs are interesting because of what happens after patient enrollment: investigator-controlled randomization to a treatment. The only pertinent UIs are for differences in outcomes.\nWhen the UI is approximately symmetric one can have UIs on the same graphs as treatment-specific point estimates by using “half confidence intervals”. In the frequentist domain, these intervals have the property that the point estimates touch the interval if and only if a statistical test of equality is not rejected at a certain statistical level. R Workflow has numerous examples, showing special value of this approach when comparing two survival curves."
+  },
+  {
+    "objectID": "post/2021-07-12-beijing-teaching-competition/index.html",
+    "href": "post/2021-07-12-beijing-teaching-competition/index.html",
+    "title": "北京市讲课比赛有感",
+    "section": "",
+    "text": "2、今年北京市讲课比赛是北医的主场，所以北医参赛更多了一些天和地利人和。但我个人感觉更重要的，是从今年开始，作为亲历者，能够看到北京市讲课比赛“重点”潜移默化的变化。因为早年的比赛，是所有学科都放在一起，所以评委专家是哪个领域的都有，很可能台下坐着听你讲心脏听诊的，是一个高能物理领域的专家。所以就很容易变成”科普大舞台“，比如在回顾过去比赛资料的时候，不夸张的说，真能看到讲台上“吹拉弹唱”的各式才艺展示。医科类还算是比较占便宜的，因为讲疾病很容易让所有人都听进去，但前辈们也往往会给讲课比赛扣上“比谁更热闹”的大帽子。但最近两届，已经都做了大学科上的划分，比如医科类，包括专家评委、学生评委，都是医学专业，因此，比赛从顶层设计上就做了“讲好一堂课”，“突出重点与难点”等的导向性设计；\n3、接上一条，比如我最终抽到演示的题目是《卵圆孔未闭》，算是心血管里比较冷门、偏专科的疾病，也是最近这些年才逐渐被大家认识到重要性的一个成人心血管疾病。原本设计的课程，最主要的重点难点，一是体循环、肺循环，二是“反常栓塞”的病生理机制。在赛前与院内辅导老师和一同参加比赛的外科同学准备交流中，他们认为已经足够体现“难点”了，但最后在北医辅导的时候，仍然被专家认为“难度不够”，不得不最后又增加了“房间隔组织胚胎发育”——这个我都感觉非常难以理解的部分作为难点；所以，未来如果希望参加的同学们，也需要好好思考一下一堂课的“重点”、“难点”都要设计在哪里。因为现在已经不简单是科普和吸引人的问题了；\n4、有意思的是，这个比赛发展本身也是一个不断内卷的过程。历史上很多著名的专家、领导都参加过这一比赛，而且获得了很好的名次。但可能是一年一年下来，参与的人越来越多，评委认为精心准备一份教案、一份课件、一次演示不足以体现大家真实的讲课水平，所以从上届比赛开始，北京市就要求每位参赛者要准备5个课时的5份教案和演示幻灯，比赛前通过随机抽签的方式决定最终演示哪一个，这也是让所有人都非常抓狂、而且指数级的增加了准备难度和投入时间精力的原因。可以负责任的说，往后想拿到好成绩，肯定会是越来越难的；\n5、听说很多参赛选手，会连续熬夜很长时间来准备比赛。但作为临床大夫，医院又不会给放假准备的机会，实在是精力有限，所以最终抽取的题目和运气，也是影响结果至关重要的因素；我个人采取了重点准备的策略，但如果目标是拿到好成绩，那这个策略一定是不可取的；\n6、要想拿好成绩，不光个人需要付出极大的努力，来自体制的支持也是必不可少。这方面我不得不说，看着别人家医院支持的力度，那是真不一样图片。听说有脱产封闭训练的、有举全科室（全院）力量共同准备的……总之，重视程度不同，肯定会极大决定最后的结果。而且这也是一个传承的过程，比如全国的讲课比赛，需要准备20份教案，那如果不是一门成体系的课程，几乎很难靠个人力量完成；\n7、说到这要说说北京市比赛的成绩组成，一共分三部分，第一部分是教案分，5份教案配套1份课程大纲提交，课程内容的设计、文档版面的设计等决定了基本的分数，想再往上拿高分，那就真的是“精雕细琢”了。看着历届比赛供大家学习的“优秀教案”，真的让人感慨，这得是花了多少时间精力反复打磨出来的啊。教案会在正式比赛之前就提交，一旦提交不可修改，之后评委会根据5份教案打出一个整体的教案得分。而课程大纲因为基本都是固定的，是不占分数的；\n8、第二部分就是现场演示分数，演示的ppt也是要提前把5份都提交并不可修改的，之后根据随机抽取的方式，按照现场演示的一份幻灯，现场专家评委和现场学生评委会给出分数。据说如果可以成功拿到现场学生评委的分数，那就离成功不远了。现场演示会有幻灯，以及黑板，教具自备，总共演示20分钟，是预先设计好的从整体1课时里节选出来的20分钟的内容；\n9、第三部分得分是教学反思，现场演示完，会关到一个小黑屋里，指定时间内对着电脑打字完成一个500字的小作文，据说这块大家差别应该不会很大；\n10、所以综合看来，很多重视这一比赛的高校和医院，会很早就开始着手准备，并对每一个课程进行演练。我们接到通知准备参加的时候，基本还啥都不清楚呢，居然有些其他单位的选手已经基本准备好5份教案和幻灯了。事实上，决定最终成绩的，很可能是准备最不充分的那一份；\n11、虽然确实花费了不少时间精力，但整个的过程还是很有收获的，因为要想讲好一堂课、做一个好老师，也是需要花功夫去琢磨的，同样的内容，用不同的方法讲出来，带给听者、学生的体验可以是天壤之别的。我一直希望能把心脏听诊这样的内容，讲出来可以让实习医生、住院医师听得津津有味、理解并付诸实践，但的确是需要花许多心思；\n12、但准备教学的过程，实际上对自己也是提高的过程。比如这次准备房间隔的组织胚胎发育，要想给别人讲明白，那自己就要更加深入的明白，每一次的讲课，无论对老师还是学生，都是一次新的领悟和成长，这应该就是教学相长的意思吧；\n13、不仅如此，这次比赛还结识了非常优秀的队友伙伴，从两位泌尿外科的大牛医生那里汲取到了太多营养，真的是方方面面、各种意想不到的收获。教育处的老师也全程陪伴着我们，还提供了全方位的支持。也希望我们今年的过程和最终结果，能让北大医院未来更加重视这项比赛，或从制度上引入一些更大力度的支持；\n14、最后感谢所有提供过帮助的同事、老师，希望最终结果出来后，也能算不辱使命，祝未来参加比赛的同学取得更好的成绩。\n\n\n\n\n\n引文BibTeX@online{李昱熙2021,\n  author = {李昱熙},\n  editor = {},\n  title = {北京市讲课比赛有感},\n  date = {2021-07-12},\n  url = {https://fharrell.com/post/2021-07-12-beijing-teaching-competition},\n  langid = {zh}\n}\n请引用这项工作：\n李昱熙. 2021. “北京市讲课比赛有感.” July 12, 2021. https://fharrell.com/post/2021-07-12-beijing-teaching-competition."
+  },
+  {
+    "objectID": "post/index.html",
+    "href": "post/index.html",
+    "title": "文章",
+    "section": "",
+    "text": "排序方式\n       缺省\n         \n          日期 - 日期升序\n        \n         \n          日期 - 日期降序\n        \n         \n          标题\n        \n         \n          作者\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年6月25日\n\n\n第一篇\n\n\n李昱熙\n\n\n\n\n2021年7月12日\n\n\n北京市讲课比赛有感\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "关于",
+    "section": "",
+    "text": "这里是一些介绍，看一下字体的效果"
+  },
+  {
+    "objectID": "about.html#李昱熙li-yuxi",
+    "href": "about.html#李昱熙li-yuxi",
+    "title": "关于",
+    "section": "李昱熙（LI, Yuxi）",
+    "text": "李昱熙（LI, Yuxi）\n我的研究方向\n\n研究领域\n\n冠心病介入\n高血压介入\n肾动脉狭窄\n电子病历数据二次应用\n数字疗法\n\n\n\n教育工作经历\n\n副主任医师北京大学第一医院心内科2022\n主治医师北京大学第一医院心内科2017\n临床医学博士北京大学医学部2014"
+  },
+  {
+    "objectID": "bio.html",
+    "href": "bio.html",
+    "title": "简历8",
+    "section": "",
+    "text": "I have written some short articles on the site, listed below.\n\nBayesian power: no unobservables\nResponder analysis: Loser x 4\nProblems with NNT\nShould we ignore covariate imbalance and stop presenting a stratified ‘table one’ for randomized trials?\nSensitivity, specificity, and ROC curves are not needed for good medical decision making\nChoosing statistical paradigms by studying the quality of decisions to which they lead\nLanguage for communicating frequentist results about treatment effects\nWhat is type I error?\nHow to teach probability\nBayesian solutions for challenges to frequentist statistics"
+  }
+]
