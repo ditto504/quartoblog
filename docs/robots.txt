@@ -1,1 +1,1 @@
-Sitemap: https://fharrell.com/sitemap.xml
+Sitemap: https://ditto504.github.io/quartoblog/sitemap.xml
