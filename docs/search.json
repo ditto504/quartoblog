@@ -11,7 +11,7 @@
     "href": "index.html#发言",
     "title": "心血管笔记",
     "section": "发言",
-    "text": "发言\n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n\n\n无匹配项"
+    "text": "发言\n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年12月17日\n\n\nCSC2022年会——心血管疾病数字疗法实践与进展\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
   },
   {
     "objectID": "post/2022-12-06-start/index.html",
@@ -82,5 +82,691 @@
     "title": "简历8",
     "section": "",
     "text": "I have written some short articles on the site, listed below.\n\nBayesian power: no unobservables\nResponder analysis: Loser x 4\nProblems with NNT\nShould we ignore covariate imbalance and stop presenting a stratified ‘table one’ for randomized trials?\nSensitivity, specificity, and ROC curves are not needed for good medical decision making\nChoosing statistical paradigms by studying the quality of decisions to which they lead\nLanguage for communicating frequentist results about treatment effects\nWhat is type I error?\nHow to teach probability\nBayesian solutions for challenges to frequentist statistics"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#目录",
+    "href": "slides/20221217-csc.html#目录",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "目录",
+    "text": "目录"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#from-r-markdown-to-quarto",
+    "href": "slides/20221217-csc.html#from-r-markdown-to-quarto",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "From R Markdown to Quarto",
+    "text": "From R Markdown to Quarto\n\n\nWelcome!\nAs you arrive, if you haven’t already, please get your machine configured using the steps found on the workshop website. Please assist your neighbors if they’re running into issues.\n\n\nhttps://rstudio-conf-2022.github.io/rmd-to-quarto/materials/\n\n\nAlso, please be ready with Discord for discussions (you should have an invite in your email from the conference)."
+  },
+  {
+    "objectID": "slides/20221217-csc.html#introductions",
+    "href": "slides/20221217-csc.html#introductions",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Introductions",
+    "text": "Introductions\nTake ~2 minutes to introduce yourself to your neighbors.\n\n\n\nPlease share …\n\nYour name\nWhere you’re from\nWhat you work on in 3 words or fewer\nName one thing you’ve made that you’re proud of"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#section",
+    "href": "slides/20221217-csc.html#section",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "",
+    "text": "理发店高血压研究再次印证了健康生活方式与依从性主导下心血管慢病诊疗的重要意义"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#section-1",
+    "href": "slides/20221217-csc.html#section-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "",
+    "text": "谢谢！\n\n\n\n\n\n北京大学第一医院"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#from-magic-to-magical-machines",
+    "href": "slides/20221217-csc.html#from-magic-to-magical-machines",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "From Magic to Magical Machines",
+    "text": "From Magic to Magical Machines\n\n\n\nArtwork by Allison Horst"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#健康生活方式与依从性-已成为心血管慢病的重中之重",
+    "href": "slides/20221217-csc.html#健康生活方式与依从性-已成为心血管慢病的重中之重",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "健康生活方式与依从性已成为心血管慢病的重中之重",
+    "text": "健康生活方式与依从性已成为心血管慢病的重中之重\n\n\n\n\n\n\n\n\n\nGant, C.M et al. Nutr & Diabetes 8, 24 (2018)."
+  },
+  {
+    "objectID": "slides/20221217-csc.html#约13高血压病人未依从服用降压药",
+    "href": "slides/20221217-csc.html#约13高血压病人未依从服用降压药",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "约1/3高血压病人未依从服用降压药",
+    "text": "约1/3高血压病人未依从服用降压药"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#经典研究回顾",
+    "href": "slides/20221217-csc.html#经典研究回顾",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "经典研究回顾",
+    "text": "经典研究回顾"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#换了个地方管理血压效果完全不同",
+    "href": "slides/20221217-csc.html#换了个地方管理血压效果完全不同",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "换了个地方管理血压效果完全不同",
+    "text": "换了个地方管理血压效果完全不同"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#主要终点-6个月sbp",
+    "href": "slides/20221217-csc.html#主要终点-6个月sbp",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "主要终点: 6个月SBP",
+    "text": "主要终点: 6个月SBP\n\n\n\n\n*Mixed linear effects model, with random intercepts for clusters, and adjusted for baseline BP, routine doctor, and high cholesterol. Drop outs were considered to be occur at random."
+  },
+  {
+    "objectID": "slides/20221217-csc.html#数字疗法-digital-therapeutics-dtx",
+    "href": "slides/20221217-csc.html#数字疗法-digital-therapeutics-dtx",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "数字疗法Digital therapeutics, DTx",
+    "text": "数字疗法Digital therapeutics, DTx\n\n由软件程序驱动，以循证医学为基础的干预方案，用以治疗、管理或预防疾病。数字疗法可以单独使用，也可以与药物、医疗器械或其他疗法配合使用。\n\n\n\n\n\n\nLivongo的数字疗法——临时紧急审批 数字化慢病管理\n\n\nCOVID-19，减少糖尿病患者前往医院导致的防疫设备的损耗，以便医院可以为住院的新冠肺炎患者提供更好的医疗保障。患者可以利用数字疗法在家监测血糖水平。数据可以上传至医疗机构，以便远程管理。\n\n\n\n\n\n\n\nWELLDOC——糖尿病DTx的标杆\n\n\n\n先作为管理软件在临床应用，然后严格通过临床试验获批（试验组VS对照组取得30%管理阳性结果）\n当前包含CGM、蓝牙连接、1型糖尿病胰岛素调节等各种功能\n其1.0版本DiabetesManager和医院EHR对接不仅可以帮助用户跟踪身体状况，还可以通过其专有的自动专家分析系统分析采集的数据，找出趋势以便辅助医生为患者提供教育和行为指导，DiabetesManager系统具有药物依从功能，可安全捕获，存储和实时传输血糖数据\n2017加入美国糖尿病协会的教育指导课程；其主要核心定位是数据测量包括CGM准确，配备胰岛素计算器和药物使用辅助决策，帮助医生完成个体化的数字处方开具"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#esc-2021未服药高血压患者-多中心rct结果",
+    "href": "slides/20221217-csc.html#esc-2021未服药高血压患者-多中心rct结果",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "ESC 2021：未服药高血压患者多中心RCT结果",
+    "text": "ESC 2021：未服药高血压患者多中心RCT结果\n\n在2021 ESC大会上，Kario代表团队报告了一项随机、对照、多中心、开放标签试验——HERB-DH1关键试验的结果。自2019年12月至2020年6月，日本的12个中心共计纳入390名诊室收缩压140至180 mmHg，24小时收缩压>130 mmHg的高血压患者，且3月内未服用任何降压药物，随机分配到数字治疗干预组（n=199）或对照组（n=191）。\n\n\n\n\nKazuomi Kario, Akihiro Nomura, Noriko Harada, Ayako Okura, Kiyose Nakagawa, Tomoyuki Tanigawa, Eisuke Hida, Efficacy of a digital therapeutics system in the management of essential hypertension: the HERB-DH1 pivotal trial, European Heart Journal, Volume 42, Issue 40, 21 October 2021, Pages 4111–4122, https://doi.org/10.1093/eurheartj/ehab559"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#前期阴性研究的支持",
+    "href": "slides/20221217-csc.html#前期阴性研究的支持",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "前期阴性研究的支持",
+    "text": "前期阴性研究的支持\n\nIn an exploratory analysis focusing on antihypertensive drug-naïve patients aged <65, the effects of the HERB intervention were significantly greater than the control for reducing 24-hour SBP by ABPM at 16 weeks (adjusted difference: −7.6 mmHg; p = .013; and morning home SBP at 24 weeks (adjusted difference − 6.0 mmHg; p = .012)."
+  },
+  {
+    "objectID": "slides/20221217-csc.html#研究方案",
+    "href": "slides/20221217-csc.html#研究方案",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "研究方案",
+    "text": "研究方案"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#数字疗法效果显著",
+    "href": "slides/20221217-csc.html#数字疗法效果显著",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "数字疗法效果显著",
+    "text": "数字疗法效果显著\n\n\n\n\n\n\n\n在未应用抗高血压药物的情况下，可有效降低24小时动态、家庭和诊室血压。\n\n\n在12周时，组间24小时动态、家庭和诊室收缩压的差异为分别为-2.4（95%置信区间-4.5至-0.3）、-4.3（-6.7至-1.9）和-3.6（-6.2至-1.0）mmHg。 此外，在观察期间显示干预组钠盐摄入明显减少，体重下降明显。24周观察期间未见明显的不良事件。"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#数字疗法对传统诊疗模式的改变",
+    "href": "slides/20221217-csc.html#数字疗法对传统诊疗模式的改变",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "数字疗法对传统诊疗模式的改变",
+    "text": "数字疗法对传统诊疗模式的改变"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#高血压治疗效果",
+    "href": "slides/20221217-csc.html#高血压治疗效果",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "高血压治疗效果",
+    "text": "高血压治疗效果"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#高脂血症治疗效果",
+    "href": "slides/20221217-csc.html#高脂血症治疗效果",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "高脂血症治疗效果",
+    "text": "高脂血症治疗效果"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#年微信公众平台搭建-最早期胸痛中心院前急救网络体系",
+    "href": "slides/20221217-csc.html#年微信公众平台搭建-最早期胸痛中心院前急救网络体系",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "2015年——微信公众平台搭建最早期胸痛中心院前急救网络体系",
+    "text": "2015年——微信公众平台搭建最早期胸痛中心院前急救网络体系"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#bama研究",
+    "href": "slides/20221217-csc.html#bama研究",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "BAMA研究",
+    "text": "BAMA研究"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#研究启动前的调研准备",
+    "href": "slides/20221217-csc.html#研究启动前的调研准备",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "研究启动前的调研准备",
+    "text": "研究启动前的调研准备"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#pci术后患者能从数字疗法中获益",
+    "href": "slides/20221217-csc.html#pci术后患者能从数字疗法中获益",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "PCI术后患者能从数字疗法中获益",
+    "text": "PCI术后患者能从数字疗法中获益\n\n\n\nLi Y, Gong Y, Zheng B, Fan F, Yi T, Zheng Y, He P, Fang J, Jia J, Zhu Q, Jiang J, Huo Y. Effects on Adherence to a Mobile App-Based Self-management Digital Therapeutics Among Patients With Coronary Heart Disease: Pilot Randomized Controlled Trial. JMIR Mhealth Uhealth. 2022 Feb 15;10(2):e32251."
+  },
+  {
+    "objectID": "slides/20221217-csc.html#智能手表助力房颤筛查",
+    "href": "slides/20221217-csc.html#智能手表助力房颤筛查",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "智能手表助力房颤筛查",
+    "text": "智能手表助力房颤筛查"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#数字疗法不应止局限于院外管理",
+    "href": "slides/20221217-csc.html#数字疗法不应止局限于院外管理",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "数字疗法不应止局限于院外管理",
+    "text": "数字疗法不应止局限于院外管理"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#我们的工作依然任重道远",
+    "href": "slides/20221217-csc.html#我们的工作依然任重道远",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "我们的工作依然任重道远",
+    "text": "我们的工作依然任重道远\n\n\n如何保证数字疗法的可持续性？\nApp vs. SaaS，例如微信小程序？\n亟需建立相关数据标准及生态体系\n院内数据与院外数据联通、O2O，从数据到证据的链条仍需大量工作补齐"
+  },
+  {
+    "objectID": "slides/20221217-csc.html#数字疗法不应局限于院外管理",
+    "href": "slides/20221217-csc.html#数字疗法不应局限于院外管理",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "数字疗法不应局限于院外管理",
+    "text": "数字疗法不应局限于院外管理"
+  },
+  {
+    "objectID": "talk/index.html",
+    "href": "talk/index.html",
+    "title": "发言",
+    "section": "",
+    "text": "排序方式\n       缺省\n         \n          日期 - 日期升序\n        \n         \n          日期 - 日期降序\n        \n         \n          标题\n        \n         \n          作者\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年12月17日\n\n\nCSC2022年会——心血管疾病数字疗法实践与进展\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
+  },
+  {
+    "objectID": "ppts/index.html",
+    "href": "ppts/index.html",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "",
+    "text": "Intro to Quarto\n\n\nIsabella Velásquez\n\nR-Ladies St. Louis\n\nHi everybody! Thank you so much for joining today’s session. I am so excited to introduce Quarto and many thanks to Laura and the R-Ladies St. Louis co-organizers for having me today."
+  },
+  {
+    "objectID": "ppts/index.html#hello",
+    "href": "ppts/index.html#hello",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Hello!",
+    "text": "Hello!\nMy name is Isabella Velásquez.\n ivelasq3 |  ivelasq |  ivelasq |  ivelasq.rbind.io\n\n\n\n\n\n\nMy name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have been an R user for many years. I am a co-organizer for R-Ladies Seattle, as well. Just a bit about me, I am an avid hiker and love cats, especially my cat, Kitty. I am also a digital illustration beginner, as you will see in my presentation today."
+  },
+  {
+    "objectID": "ppts/index.html#instructions",
+    "href": "ppts/index.html#instructions",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Instructions",
+    "text": "Instructions\n\n\nSlides: https://ivelasq.quarto.pub/intro-to-quarto/\nSession repo with instructions: https://github.com/ivelasq/2022-10-27_intro-to-quarto\nExercise repo: https://github.com/ivelasq/intro-to-quarto-exercises\nrstudio.cloud Project: https://rstudio.cloud/content/4823293\n\n\n\n\n\n\n\n\n\nWorkshop Prep\n\n\n\nTo follow along with the exercises, please be sure that you:\n\nAre on the latest version of RStudio v2022.07 or later and have cloned the exercise repo\nOr, have a rstudio.cloud account and can access the project\nAnd, have a https://quartopub.com/ account.\n\n\n\n\nYou have a few options of how to attend this session. On the README file of the GitHub repo for this session is a list of instructions and a link to the exercise repo. One option is that you have a local copy of the exercises already, and when we get to the different sections you can follow along with what I am doing on your own RStudio. Another option is that you sign up for RStudio Cloud and go into the project to follow along. It is also linked in the instructions. One benefit of this is that you don’t have to have RStudio installed on your computer and the project is ready, the packages are installed for you, and you can save a copy of your work if you would like. But, please feel free to just watch the session and try things out on your own afterwards. The slides, repositories, and project will stay up so that you can try things out on your own time. One other thing to note is that Quarto has a lot of options for creating content, so I added some reference materials in the exercise repo README so that you can play around with other options other than the ones I show you."
+  },
+  {
+    "objectID": "ppts/index.html#what-is-quarto",
+    "href": "ppts/index.html#what-is-quarto",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "What is Quarto®?",
+    "text": "What is Quarto®?\n\nQuarto® is an\n\nopen-source\n\n\nscientific and technical\n\n\npublishing system\n\n\nbuilt on Pandoc.\n\n\n\nQuarto is an open-source scientific and technical publishing system built on Pandoc. Let’s break this down: Open-source: RStudio believes that it’s better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We’ll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format.Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We’ll cover this as well."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-origins",
+    "href": "ppts/index.html#quarto-origins",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Origins",
+    "text": "Quarto Origins\n\n\nOpen source project sponsored by RStudio, PBC\nWe’ve had 10 years of experience with R Markdown\nBut there are a lot of other programming languages…\n\n\n\nCan we reimplement R Markdown such that it’s not tied to R?\n\n\nCheck out JJ Allaire’s R Medicine Keynote!\n\nR Markdown is a file format for making dynamic documents with R. However, you need to call it from R to use it, and it was depedentn on knitr. If you’re a Python user, it means you need to install R to use R Markdown. Quarto is a tool that you can call from the terminal or command line, and is independent from the computational systems. Quarto supports knitr, and can support others. So, you can think of Quarto as the next generation R Markdown that is fundamentally multilanguage and multiengine."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-goals",
+    "href": "ppts/index.html#quarto-goals",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Goals",
+    "text": "Quarto Goals\n\n\nCreate computational documents that hold source code for automation and reproducibility\nReduce how difficult it is to make a scientific document\nEnable “single-source publishing” — create Word, PDFs, HTML, etc. from one source\n\n\n\n\nCheck out JJ Allaire’s R Medicine Keynote!\n\nSo the goals are to create these dynamic documents that can be reproducible and automated. [story about building documents]. For single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source."
+  },
+  {
+    "objectID": "ppts/index.html#a-new-tool-for-literate-programming",
+    "href": "ppts/index.html#a-new-tool-for-literate-programming",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "A new tool for literate programming",
+    "text": "A new tool for literate programming\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheck out JJ Allaire’s R Medicine Keynote!\n\nQuarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. [click] There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!"
+  },
+  {
+    "objectID": "ppts/index.html#why-a-new-system",
+    "href": "ppts/index.html#why-a-new-system",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Why a new system?",
+    "text": "Why a new system?\n\n\nAt its core, Quarto is multilingual and independent of computational systems\nHas expanded upon R Markdown to add new languages and can add more in the future\n\n\n\nLet’s bring R Markdown to everybody!\n\nSo, if there already exist literate programming tools out there, why create a new one, especially since RStudio is also behind R Markdown? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. This new system brings R Markdown to everybody."
+  },
+  {
+    "objectID": "ppts/index.html#why-is-it-called-quarto",
+    "href": "ppts/index.html#why-is-it-called-quarto",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Why is it called “Quarto”?",
+    "text": "Why is it called “Quarto”?\n\n\n\n“Quarto is the format of a book orpamphlet produced from full sheetsprinted with eight pages of text, four to aside, then folded twice to produce four leaves.”\n— Wikipedia\n\n\n\n\n\n\n\nImage based on one from gutenberg.org\n\nAccording to the website, the developers wanted to use a name that had meaning in the history of publishing and ulitimately landed on Quarto. A quarto is an 8-page double-sided booklet, made by folding a single sheet of paper into four sections."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-formats",
+    "href": "ppts/index.html#quarto-formats",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Formats",
+    "text": "Quarto Formats\n\nWebsitesBooksBlogsPresentationsJournals\n\n\n\n\n\nnbdev.fast.ai\n\n\n\n\n\n\n\nPython for Data Analysis, 3E by Wes McKinney\n\n\n\n\n\n\n\nhttps://jollydata.blog/\n\n\n\n\n\n\n\nThe untold story of palmerpenguins by Dr. Kristen Gorman, Dr. Allison Horst, andDr. Alison Hill\n\n\n\n\n\n\n\nJournal of Statistical Software (JSS)\n\n\n\n\n\n\nQuarto can make very flexible websites, or books which are a a Quarto website that can be rendered to Word, ePub, etc., blogs with listings and posts and RSS feeds, Quarto has deep feature set for presentations with reveal.js optimized for scientific content, and of course, publishing for journals. There is custom format systems and the ability to flexibly adapt LaTeX templates."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-engines",
+    "href": "ppts/index.html#quarto-engines",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Engines",
+    "text": "Quarto Engines\n\nknitr\n\n\nAn engine is the tool that runs code. This is the underlying structure that creates documents from the source, the Quarto markdown file or the QMD file. When we render a Quarto document, first, the knitr engine executes all of the code chunks and generates an intermediary markdown file that includes both the code and code output. Then that markdown file is processed by pandoc to create the finished document. Since Quarto uses knitr, most Rmd files can be used unmodified."
+  },
+  {
+    "objectID": "ppts/index.html#knitr-1",
+    "href": "ppts/index.html#knitr-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "knitr",
+    "text": "knitr\n\n\n---\ntitle: \"ggplot2 demo\"\nformat: \n  html:\n    code-fold: true\n---\n\n## Meet Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.\n\n```{r}\n#| label: plot-penguins\n#| echo: false\n#| message: false\n#| warning: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```\n\n\n\n\n\nThis is a Quarto document with the extension .qmd (on the left) along with its rendered version as HTML (on the right). You could also choose to render it into other formats like PDF, MS Word, etc. This is the basic model for Quarto publishing—take a source document and render it to a variety of output formats."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-engines-1",
+    "href": "ppts/index.html#quarto-engines-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Engines",
+    "text": "Quarto Engines\n\nJupyter\n\n\nThe structure is similar for Jupyter, we just are running documents natively through the Jupyter engine. Like R Marukdown, you can render Jupyter notebooks with Quarto, too. Jupyter will support any other language that has a Jupyter kernal, and right now, there’s a lot of Quarto functionality for Python and Julia through Jupyter. But, this is part of the multilingualism that we discussed earlier, where you can keep adding languages if you swap out different engines. This also means you can have a shared syntax and format across languages, since the backend is the same."
+  },
+  {
+    "objectID": "ppts/index.html#jupyter-1",
+    "href": "ppts/index.html#jupyter-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Jupyter",
+    "text": "Jupyter\n\n\n---\ntitle: \"Palmer Penguins Demo\"\nformat: \n    html:\n        code-fold: true\njupyter: python3\n---\n\n## Meet Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.\n\n```{python}\n#| echo: false\n#| message: false\n\nimport pandas as pd\nimport seaborn as sns \nfrom palmerpenguins import load_penguins\nsns.set_style('whitegrid')\n\npenguins = load_penguins()\n\ng = sns.lmplot(x=\"flipper_length_mm\",\n               y=\"body_mass_g\",\n               hue=\"species\",\n               height=7,\n               data=penguins,\n               palette=['#FF8C00','#159090','#A034F0']);\ng.set_xlabels('Flipper Length');\ng.set_ylabels('Body Mass');\n```"
+  },
+  {
+    "objectID": "ppts/index.html#quarto-engines-2",
+    "href": "ppts/index.html#quarto-engines-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Engines",
+    "text": "Quarto Engines\n\nObservable JS\n\nNative support for Observable JS\nReactive runtime for interactive data analysis\n\nObservable Demo\n\nQuarto has native support for Observable JS, a set of enhancements to vanilla JS. It has reactive runtime, so you can interactively work with data within your Quarto document. There are other options too, like htmlwidgets and Shiny for Python."
+  },
+  {
+    "objectID": "ppts/index.html#why-quarto",
+    "href": "ppts/index.html#why-quarto",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Why Quarto?",
+    "text": "Why Quarto?\n\nA unified ecosystem\n\n\nR Markdown has a lot of packages doing lots of different things\n\n\n\nQuarto has a shared expression for core features\n\n\n\n\nSo this is all good and well, but you may be wondering should you switch to Quarto if you already have another tool that you really like, you may be wondering whether or not you should switch. Here are some considerations. Quarto has a shared expression for core features. If you used the packages from the R Markdown ecosystem, then you may have had to switch between different ways of doing the same thing. In Quarto, you have a shared core syntax that is the same across all formats. Things like tabset, code folding, cross references in the same way. Another example is that Quarto has a universal theming system based on SCSS for all HTML output where core variables defined by bslib and so it is compatible with Shiny, flexdashboard, and R Markdown themes. So, users can create very consistent and organized theming across content."
+  },
+  {
+    "objectID": "ppts/index.html#why-quarto-1",
+    "href": "ppts/index.html#why-quarto-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Why Quarto?",
+    "text": "Why Quarto?\n\nNew features\n\nCross references\nAdvanced layout\nFigure/layout panels\nCallouts\nDiagrams\nExtensions\nInteractivity\nYAML intelligence\nPublishing\nConditional content\nNotebook filters\n\n\nR Markdown isn’t going away but big new features will be in Quarto, things like YAML intelligence, figure panels, layouts, which we’ll cover later in the session."
+  },
+  {
+    "objectID": "ppts/index.html#why-quarto-2",
+    "href": "ppts/index.html#why-quarto-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Why Quarto?",
+    "text": "Why Quarto?\n\nLua-based extension system\n\nShortcodesJournalFormatsRevealjs\n\n\n\n\n\nnutshell shortcode by schochastics\n\n\n\n\n\n\n\nJournal of Statistical Software (JSS)\n\n\n\n\n\n\n\nnes-revealjs format by EmilHvitfeldt\n\n\n\n\n\n\n\nattribution Revealjs Extension\n\n\n\n\n\n\nQuarto also supports extensions. Quarto extensions are written in Lua, meaning that they are not language specific. So, you can use the same extension in a Jupyter file or a knitr file. Shortcodes let you add content, like fontawesome icons that you have seen in this presentation, or videos from YouTube. Filters let you add new markdown syntax for extended features. And formats are custom formats. There are built in extensions and then community built ones, if you search for Awesome Quarto, there are a list of them there."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-installation",
+    "href": "ppts/index.html#quarto-installation",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Installation",
+    "text": "Quarto Installation\n\n\n\nquarto.org\n\nWhen you download the Quarto CLI, though, that’s all you need to run Quarto, so you can use just your Terminal or Command Line Interface for everything that we’ll explore, but you will need to install the engines if you’re going to run code with the CLI."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-tooling",
+    "href": "ppts/index.html#quarto-tooling",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Tooling",
+    "text": "Quarto Tooling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerminal\n\nquarto render\n\n\nPart of the multilingualism of Quarto is that you are not tied to one tool. Quarto is meant for collaboration either within data science teams or across data science teams. So if someone is familiar with Jupyter Lab, but someone else likes to work in RStudio, they can still work on the same Quarto documents without having to switch to one tool or the other.\nFor RStudio users, Quarto is bundled and preinstalled with v2022.07 and later. There are a lot of features that are built into RStudio for Quarto documents. We didn’t want to limit Quarto enhancements to just RStudio. VS Code has an extension so you can YAML completion and linting and other features for writing Quarto documents, and you can preview documents in Jupyter Notebooks and Jupyter Labs."
+  },
+  {
+    "objectID": "ppts/index.html#working-in-rstudio",
+    "href": "ppts/index.html#working-in-rstudio",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Working in RStudio",
+    "text": "Working in RStudio\n\nRendering\nUse the Render button () in the RStudio IDE to render the file and preview the output with a single click or keyboard shortcut (⇧⌘K).\n\nAutomatically render on save by checking the Render on Save option:\n\n\nIn RStudio, you can use the Render button to render the file, or take it through that process of convering to markdown, pandoc processing, etc. and preview the output with a single click. If you’re familiar with R Markdown, it is where the knit button would show for those document. If you prefer to automatically render whenever you save, you can check the Render on Save option on the editor toolbar. The preview will update whenever you re-render the document. Side-by-side preview works for both HTML and PDF outputs."
+  },
+  {
+    "objectID": "ppts/index.html#yaml-intelligence",
+    "href": "ppts/index.html#yaml-intelligence",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "YAML Intelligence",
+    "text": "YAML Intelligence\nYAML code completion is available for project files, YAML front matter, and executable cell options:\n\nIf you have incorrect YAML it will also be highlighted when documents are saved:\n\n\nLet’s try it!\n\n\nQuarto has YAML intelligence in RStudio and VS code. YAML intelligence means completion and diagnostics for errors, and its’ available for project files, YAML front matter, and executable cell options. This makes it easy to write YAML and see what has gone wrong rather than getting error messages that are really hard to decipher."
+  },
+  {
+    "objectID": "ppts/index.html#working-with-the-rstudio-visual-editor",
+    "href": "ppts/index.html#working-with-the-rstudio-visual-editor",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Working with the RStudio Visual Editor",
+    "text": "Working with the RStudio Visual Editor\n\n\n\nLet’s try it!\n\n\nRStudio has two options for editing documents: visual (on the left) and source (on the right). RStudio’s visual editor offers an WYSIWYM authoring experience for markdown. So formatting (e.g. bolding text) you can use the toolbar, a keyboard shortcut (⌘B), or the markdown construct (bold). The plain text source code underlying the document is written for you and you can view/edit it at any point by switching to source mode for editing. You can toggle back and forth these two modes by clicking on Source and Visual in the editor toolbar (or using the keyboard shortcut ⌘⇧ F4)."
+  },
+  {
+    "objectID": "ppts/index.html#contents-of-a-quarto-document",
+    "href": "ppts/index.html#contents-of-a-quarto-document",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Contents of a Quarto Document",
+    "text": "Contents of a Quarto Document\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Quarto document contains three types of content: a YAML header, code chunks, and markdown text."
+  },
+  {
+    "objectID": "ppts/index.html#yaml",
+    "href": "ppts/index.html#yaml",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "YAML",
+    "text": "YAML\n\n\n\n\n\n\n\n“Yet another markup language”\nMetadata of your document\nDemarcated by three dashes (---) on either end\nUses key-value pairs in the format key: value\n\n\n\n\n\nQuarto documents usually start with an (optional) YAML header demarcated by three dashes on either end. The basic syntax of YAML uses key-value pairs in the format key: value. It controls the output of the document and contain metadata for your document, like title and author."
+  },
+  {
+    "objectID": "ppts/index.html#yaml-1",
+    "href": "ppts/index.html#yaml-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "YAML",
+    "text": "YAML\n---\ntitle: \"Penguins, meet Quarto!\"\nformat: html\neditor: visual\n---\n\nOther YAML fields commonly found in headers of documents include metadata like author, subtitle, date as well as customization options like theme, fontcolor, fig-width, etc."
+  },
+  {
+    "objectID": "ppts/index.html#yaml-2",
+    "href": "ppts/index.html#yaml-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "YAML",
+    "text": "YAML\n---\ntitle: \"Penguins, meet Quarto!\"\nsubtitle: \"Intro to Quarto Exercise\"\nformat: html\neditor: visual\n---\n\n\nLet’s try it!\n\nAll YAML fields for HTML documents"
+  },
+  {
+    "objectID": "ppts/index.html#code-chunks",
+    "href": "ppts/index.html#code-chunks",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Chunks",
+    "text": "Code Chunks\n\n\n\n\n\n\n\nCode chunks begin and end with three backticks (usually)\nCode chunks are identified with a programming language in between {}\nCan include optional chunk options, in YAML style, identified by #| at the beginning of the line\n\n\n\n\n\nCode chunks are identified with three backticks, the language in curly brackets, and can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk."
+  },
+  {
+    "objectID": "ppts/index.html#code-chunks-1",
+    "href": "ppts/index.html#code-chunks-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Chunks",
+    "text": "Code Chunks\n```{r, label=\"plot-penguins\", warning=FALSE, echo=FALSE}\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```"
+  },
+  {
+    "objectID": "ppts/index.html#code-chunks-2",
+    "href": "ppts/index.html#code-chunks-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Chunks",
+    "text": "Code Chunks\n```{r}\n#| label: plot-penguins\n#| warning: false\n#| echo: false\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```"
+  },
+  {
+    "objectID": "ppts/index.html#code-chunks-3",
+    "href": "ppts/index.html#code-chunks-3",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Chunks",
+    "text": "Code Chunks\n```{r}\n#| label: plot-penguins\n#| warning: false\n#| echo: false\n#| fig.alt: \"Scatterplot with flipper length in millimeters on\n#|  the x-axis, bill length in millimeters on the y-axis, colored\n#|  by species, showing a slightly positive relationship with\n#|  Chinstrap penguins having higher bill length but lower body\n#|  mass, Adelie with low bill length and low body mass, and\n#|  Gentoo with high body mass and high bill length.\"\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```\n\nThe new hashpipe allows for consistency across Jupyter and knitr."
+  },
+  {
+    "objectID": "ppts/index.html#code-chunks-4",
+    "href": "ppts/index.html#code-chunks-4",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Chunks",
+    "text": "Code Chunks\n\n\nLet’s try it!\n\n\nIn addition to rendering the complete document to view the results of code chunks you can also run each code chunk interactively in the RStudio editor by clicking the icon or keyboard shortcut (⇧⌘⏎). RStudio executes the code and displays the results either inline within your file or in the Console, depending on your preference."
+  },
+  {
+    "objectID": "ppts/index.html#code-chunks-5",
+    "href": "ppts/index.html#code-chunks-5",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Chunks",
+    "text": "Code Chunks\n\nCross referencing\n```{r}\n#| label: fig-penguins\n#| warning: false\n\nggplot(penguins,\n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\", \"purple\", \"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\",\n    y = \"Bill length (mm)\",\n    color = \"Penguin species\",\n    shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```\nSee @fig-penguins."
+  },
+  {
+    "objectID": "ppts/index.html#code-chunks-6",
+    "href": "ppts/index.html#code-chunks-6",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Chunks",
+    "text": "Code Chunks\n\nCross referencing"
+  },
+  {
+    "objectID": "ppts/index.html#multiple-figures",
+    "href": "ppts/index.html#multiple-figures",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Multiple Figures",
+    "text": "Multiple Figures\nPut two plots side by side:\n```{r}\n#| layout-ncol: 2\n#| warning: false\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species))\n\nggplot(data = penguins, aes(x = flipper_length_mm)) +\n  geom_histogram(aes(fill = species), \n                 alpha = 0.5, \n                 position = \"identity\")\n\n```\n\nLet’s add another plot to our chunk. Our goal is to display these plots side-by-side."
+  },
+  {
+    "objectID": "ppts/index.html#multiple-figures-1",
+    "href": "ppts/index.html#multiple-figures-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Multiple Figures",
+    "text": "Multiple Figures\nPut two plots side by side:"
+  },
+  {
+    "objectID": "ppts/index.html#multiple-figures-2",
+    "href": "ppts/index.html#multiple-figures-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Multiple Figures",
+    "text": "Multiple Figures\nPut two plots side by side:\n```{r}\n#| layout: \"[[30, 70]]\"\n#| warning: false\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species))\n\nggplot(data = penguins, aes(x = flipper_length_mm)) +\n  geom_histogram(aes(fill = species), \n                 alpha = 0.5, \n                 position = \"identity\")\n\n```"
+  },
+  {
+    "objectID": "ppts/index.html#code-options-for-all-chunks",
+    "href": "ppts/index.html#code-options-for-all-chunks",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Options for All Chunks",
+    "text": "Code Options for All Chunks\nUse the YAML to control options for all code chunks.\nHide all of the code and just show the output by specifying echo: false within the execute option in the YAML.\n\nEcho\n\n\n\n\nOne chunk\n```{r}\n#| label: plot-penguins\n#| echo: false\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```\n\n\nAll chunks\n```{yaml}\n---\ntitle: \"Hello, Quarto!\"\nformat: html\neditor: visual\nexecute:\n  echo: false\n---\n```"
+  },
+  {
+    "objectID": "ppts/index.html#code-options-for-all-chunks-1",
+    "href": "ppts/index.html#code-options-for-all-chunks-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Options for All Chunks",
+    "text": "Code Options for All Chunks\n\nCode Folding\n```{yaml}\n---\ntitle: \"Hello, Quarto!\"\nformat:\n  html:\n    code-fold: true\n---\n```\n\n\nCode Tools\n```{yaml}\n---\ntitle: \"Hello, Quarto!\"\nformat:\n  html:\n    code-tools:\n      source: https://quarto.org\n---\n```"
+  },
+  {
+    "objectID": "ppts/index.html#code-options-for-all-chunks-2",
+    "href": "ppts/index.html#code-options-for-all-chunks-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Code Options for All Chunks",
+    "text": "Code Options for All Chunks\n\nCode Linking\nNeeds downlit package\n\n\n\n```{yaml}\n---\ntitle: \"Hello, Quarto!\"\nformat:\n  html:\n    code-link: true\n---\n```\n\n\n\n\n\n\n\nYou might want to fold it and allow readers to view it at their discretion. You can do this via the code-fold option. Remove the echo option we previously added and add the code-fold HTML format option."
+  },
+  {
+    "objectID": "ppts/index.html#markdown-text",
+    "href": "ppts/index.html#markdown-text",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Markdown Text",
+    "text": "Markdown Text\n\n\n\n\n\n\n\nMarkdown is a lightweight language for creating formatted text\nQuarto is based on Pandoc and uses its variation of markdown as its underlying document syntax\n\n\n\n\n\nMarkdown is a lightweight markup language for creating formatted text using a plain-text editor. Quarto uses markdown syntax for text."
+  },
+  {
+    "objectID": "ppts/index.html#markdown-text-1",
+    "href": "ppts/index.html#markdown-text-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Markdown Text",
+    "text": "Markdown Text\n\n\nThe `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins \"palmerpenguins R package\") package contains size measurements for `r nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\n\n\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\n\nIf using the visual editor, you won’t need to learn much markdown syntax for authoring your document as you can use the menus and shortcuts to add a header, bold text, insert a table, etc. If using the source editor, you can achieve these with markdown expressions like ##, bold, etc.\n\n\n\nMarkdown Text\n\n\nFormatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics* and **bold**\nitalics and bold\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\n\nMarkdown Text\n\n\nImages and Links\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n<https://quarto.org>\nhttps://quarto.org\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![](penguin.jpg)\n\n\n\n\n\n\nPhoto by Cornelius Ventures on Unsplash"
+  },
+  {
+    "objectID": "ppts/index.html#markdown-text-4",
+    "href": "ppts/index.html#markdown-text-4",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Markdown Text",
+    "text": "Markdown Text\n\nTables\n```{markdown}\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|    12 | 12   | 12      |   12   |\n|   123 | 123  | 123     |  123   |\n|     1 | 1    | 1       |   1    |\n```\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1"
+  },
+  {
+    "objectID": "ppts/index.html#markdown-text-5",
+    "href": "ppts/index.html#markdown-text-5",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Markdown Text",
+    "text": "Markdown Text\n\nTables\n```{markdown}\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|    12 | 12   | 12      |   12   |\n|   123 | 123  | 123     |  123   |\n|     1 | 1    | 1       |   1    |\n\n: Table Column Widths {tbl-colwidths=\"[10,30,30,30]\"}\n```\n\nTable Column Widths\n\n\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\nLet’s try it!\n\nQuarto guide for Markdown basics"
+  },
+  {
+    "objectID": "ppts/index.html#quarto-authoring",
+    "href": "ppts/index.html#quarto-authoring",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Authoring",
+    "text": "Quarto Authoring\n\nDiagrams\nQuarto has native support for embedding Mermaid and Graphviz diagrams.\n\n\nCode\n```{mermaid}\n%%| fig-width: 6\nflowchart LR\n  A[1] --> B(2)\n  B --> C{3}\n  C --> D[4]\n  C --> E[5]\n```\n\n\n\n\nflowchart LR\n  A[1] --> B(2)\n  B --> C{3}\n  C --> D[4]\n  C --> E[5]\n\n\n\n\n\n\n\n\n\nThere is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it’s a pretty handy tool to get to know."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-authoring-1",
+    "href": "ppts/index.html#quarto-authoring-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Authoring",
+    "text": "Quarto Authoring\n\nEquations\n```{markdown}\n$$E = mc^{2}$$\n```\n\\[E = mc^{2}\\]"
+  },
+  {
+    "objectID": "ppts/index.html#quarto-authoring-2",
+    "href": "ppts/index.html#quarto-authoring-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Authoring",
+    "text": "Quarto Authoring\n\nTitle Banners\n\n\n\n\n\n\nHTML pages rendered with Quarto include a formatted title banner at the start of the article."
+  },
+  {
+    "objectID": "ppts/index.html#title-banners-1",
+    "href": "ppts/index.html#title-banners-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Title Banners",
+    "text": "Title Banners\n---\ntitle: \"Penguins, meet Quarto!\"\nformat: html\neditor: visual\n---\n\nToggle on…"
+  },
+  {
+    "objectID": "ppts/index.html#title-banners-2",
+    "href": "ppts/index.html#title-banners-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Title Banners",
+    "text": "Title Banners\n---\ntitle: \"Penguins, meet Quarto!\"\ntitle-block-banner: true\nformat: html\neditor: visual\n---"
+  },
+  {
+    "objectID": "ppts/index.html#title-banners-3",
+    "href": "ppts/index.html#title-banners-3",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Title Banners",
+    "text": "Title Banners\nUse a color…\n---\ntitle: \"Penguins, meet Quarto!\"\ntitle-block-banner: \"#FDA172\"\nformat: html\neditor: visual\n---"
+  },
+  {
+    "objectID": "ppts/index.html#title-banners-4",
+    "href": "ppts/index.html#title-banners-4",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Title Banners",
+    "text": "Title Banners\nOr a photo!\n---\ntitle: \"Penguins, meet Quarto!\"\ntitle-block-banner: \"banner-image.jpg\"\nformat: html\neditor: visual\n---\n\n\nLet’s try it!\n\nAll title block metadata"
+  },
+  {
+    "objectID": "ppts/index.html#divs-and-spans",
+    "href": "ppts/index.html#divs-and-spans",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Divs and Spans",
+    "text": "Divs and Spans\nYou can add classes, attributes, and other identifiers to content using Divs and Spans.\n\nDivs\n::: {.border}\nThis content can be styled with a border\n:::\n\n\nSpans\n[This is *some text*]{.class key=\"val\"}\n\n\n\nDivs\n\n\n::: - Div start and end\n#id - label\n.class - behavior\nattribute=value - customization\n\n\n\n\nDivs\n\nCallout Blocks\n:::{.callout-tip}\n\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n\n:::\n\n\n\n\n\n\n\nTip\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\nPandoc and therefore Quarto can parse fenced Div blocks, which lets you modify the structure of your documents. You can add classes, attributes, and other identifiers to regions of content using Divs and Spans. You can think of divs as HTML divs but can be applied in PDFs or other formats like Word. Here is an example of a call out, which calls out special content for readers and you may have seen them in books or papers. Quarto has this for all different formats using Divs.\n\n\n\n\n\n\nDivs\n\nCallout Blocks\n::: {#call1 .callout-note appearance=\"simple\"}\n\n## Pay Attention\n\nUsing callouts is an effective way to highlight content that your reader give special consideration or attention.\n\n:::\n\n\n\n\n\n\nPay Attention\n\n\n\nUsing callouts is an effective way to highlight content that your reader give special consideration or attention.\n\n\n\n\n\n\nDivs\n\nCallout Blocks\n\n\n\n\n\n\nWarning\n\n\n\n.callout-warning\n\n\n\n\n\n\n\n\nDanger\n\n\n\n.callout-caution\n\n\n\n\n\n\n\n\nImportant\n\n\n\n.callout-important\n\n\n\n\n\n\nDivs\n\nMultiple columns\n```{markdown}\n::: {layout-ncol=2}\n\n![](penguin.jpg)\n\nPhoto by <a href=\"https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Cornelius Ventures</a> on <a href=\"https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>\n:::\n```\n\n\n\n\n\n\n\nPhoto by Cornelius Ventures on Unsplash\n\n\n\n\n\n\n\n\nDivs\n\nMultiple columns\n```{markdown}\n::: {layout=\"[[1,1], [1]]\"}\n![penguin 1](penguin.jpg)\n\n![penguin 2](penguin.jpg)\n\n![penguin 3](penguin.jpg)\n:::\n```\n\n```{markdown}\n::: {layout=\"[[70,30], [100]]\"}\n![penguin 1](penguin.jpg)\n\n![penguin 2](penguin.jpg)\n\n![penguin 3](penguin.jpg)\n:::\n```\n\n\n\n\nDivs\n\nTabsets\n```{markdown}\n::: {.panel-tabset group=\"language\"}\n## R\n\n`library(dplyr)`\n\n## Python\n\n`import pandas as pd`\n:::\n```\n\nRPython\n\n\nlibrary(dplyr)\n\n\nimport pandas as pd\n\n\n\n\n\n\n\nSpans\n\n\n[] and {} for span start and end\n.class - behavior\nkey=\"val\" - customization\n\n\nYou can also apply styles to inline text by creating spans. Use square brackets to surround the text and curly bracketes for the style you would like.\n\n\n\n\nSpans\n```{markdown}\nThis is text that is [red]{style=\"color:red;\"}.\n```\n\nThis is text that is red.\n\n\n\n\nSpans\n```{markdown}\n![](penguin.jpg){fig-alt=\"A photo of a penguin jumping\"}\n```\n\n```{markdown}\n![](penguin.jpg){fig-alt=\"A photo of a penguin jumping\" width=100}\n```"
+  },
+  {
+    "objectID": "ppts/index.html#other-formats",
+    "href": "ppts/index.html#other-formats",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Other formats",
+    "text": "Other formats\nYou can create Revealjs presentations using the revealjs format.\n```{yaml}\n---\ntitle: \"Penguins, meet Quarto!\"\nformat: revealjs\neditor: visual\n---\n```\n\n\nLet’s try it!"
+  },
+  {
+    "objectID": "ppts/index.html#revealjs-1",
+    "href": "ppts/index.html#revealjs-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Revealjs",
+    "text": "Revealjs\n\nCode Line Numbers\n```{r}\n#| echo: true\n#| eval: FALSE\n#| code-line-numbers: 3-4\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) \n```\n\n\n\nCode\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) \n\n\n\nMost of the core capabilities of Quarto HTML Code Blocks are available for Reveal slides, including code folding, code copy, and the ability to pick a custom syntax highlighting theme. Revealjs also has some functionality not available in documents, such as code-line-highlighting, which lets you highlight specific lines of code output or highlight distinct lines over a progression of steps."
+  },
+  {
+    "objectID": "ppts/index.html#revealjs-2",
+    "href": "ppts/index.html#revealjs-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Revealjs",
+    "text": "Revealjs\n\nIncremental\n```{markdown}\n::: {.incremental}\n- Adelie\n- Chinstrap\n- Gentoo\n:::\n```\n\n\nAdelie\nChinstrap\nGentoo\n\n\nAll about revealjs in Quarto\n\nBy default number and bullet lists within slides are displayed all at once. You can override this globally using the incremental option."
+  },
+  {
+    "objectID": "ppts/index.html#create-a-new-document",
+    "href": "ppts/index.html#create-a-new-document",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Create a new document",
+    "text": "Create a new document\nTo create a new document in RStudio, go to File > New File > Quarto Document:\n\n\n\n\n\n\nA new document will be created with the following YAML. This document will be empty so it won’t be terribly interesting."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-projects",
+    "href": "ppts/index.html#quarto-projects",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Projects",
+    "text": "Quarto Projects\nQuarto projects are directories that provide:\n\n\nA way to render all or some of the files in a directory with a single command (e.g. quarto render myproject).\nA way to share YAML configuration across multiple documents.\nThe ability to redirect output artifacts to another directory.\nThe ability to freeze rendered output (i.e. don’t re-execute documents unless they have changed)."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-projects-1",
+    "href": "ppts/index.html#quarto-projects-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Projects",
+    "text": "Quarto Projects\n```{yaml}\nproject:\n  output-dir: _output\n\ntoc: true\nnumber-sections: true\nbibliography: references.bib  \n  \nformat:\n  html:\n    css: styles.css\n    html-math-method: katex\n  pdf:\n    documentclass: report\n    margin-left: 30mm\n    margin-right: 30mm\n```\n\nWithin a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project. Quarto projects also include a _quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the _quarto.yml file."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-projects-2",
+    "href": "ppts/index.html#quarto-projects-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Projects",
+    "text": "Quarto Projects\n\nFreeze\n```{yaml}\nexecute:\n  freeze: true  # never re-render during project render\n```\n\n```{yaml}\nexecute:\n  freeze: auto  # re-render only when source changes\n```\n\nRendering a bunch of files can be quite time consuming depending on the computations required. The freeze option specifies if computational documents should never be re-rendered during a global project render, or only be re-rendered when their source file changes. Freeze can used when you have either a large number of collaborators or many computational documents created over a long period of time. In these cases, it can be challenging to fully re-execute every document when you render the site. This could be because some documents have environment-specific requirements or one of your teammates wrote something in Python, which you don’t have installed. Using freeze ensures that you can always reproducibly render your site."
+  },
+  {
+    "objectID": "ppts/index.html#html-theming",
+    "href": "ppts/index.html#html-theming",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "HTML Theming",
+    "text": "HTML Theming\nQuarto includes 25 themes from the Bootswatch project:\n\ndefault\ncerulean\ncosmo\ncyborg\ndarkly\nflatly\njournal\nlitera\nlumen\nlux\nmateria\nminty\nmorph\npulse\nquartz\nsandstone\nsimplex\nsketchy\nslate\nsolar\nspacelab\nsuperhero\nunited\nvapor\nyeti\nzephyr"
+  },
+  {
+    "objectID": "ppts/index.html#html-theming-1",
+    "href": "ppts/index.html#html-theming-1",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "HTML Theming",
+    "text": "HTML Theming\nUse these themes under the theme option in the YAML:\n```{yaml}\nformat:\n  html:\n    theme: flatly\n```"
+  },
+  {
+    "objectID": "ppts/index.html#html-theming-2",
+    "href": "ppts/index.html#html-theming-2",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "HTML Theming",
+    "text": "HTML Theming\nYou can do extensive additional customization using SASS theme files.\n\nBootstrap defines over 1,400 variables that control fonts, colors, padding, borders, and much more!\n\n```{css}\n/*-- scss:defaults --*/\n\n$body-bg: #CDEEFD;\n\n/*-- scss:rules --*/\nh1, h2, h3, h4, h5, h6 {\n  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);\n}\n```"
+  },
+  {
+    "objectID": "ppts/index.html#html-theming-3",
+    "href": "ppts/index.html#html-theming-3",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "HTML Theming",
+    "text": "HTML Theming\nProvide the custom theme under theme:\n```{yaml}\ntheme:\n  - flatly\n  - custom.scss\n```"
+  },
+  {
+    "objectID": "ppts/index.html#html-theming-4",
+    "href": "ppts/index.html#html-theming-4",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "HTML Theming",
+    "text": "HTML Theming\nQuarto also allows you to use a dark and light theme.\n```{yaml}\ntheme:\n  light: flatly\n  dark: darkly\n```"
+  },
+  {
+    "objectID": "ppts/index.html#publishing-options",
+    "href": "ppts/index.html#publishing-options",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Publishing options",
+    "text": "Publishing options\nSince content rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) it can be published anywhere.\nSome options:\n\nQuarto Pub\nGitHub Pages\nRStudio Connect\nNetlify\n\n\nThere’s an integrated quarto publish command that lets you publish in a bunch of places."
+  },
+  {
+    "objectID": "ppts/index.html#quarto-pub",
+    "href": "ppts/index.html#quarto-pub",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto Pub",
+    "text": "Quarto Pub\nQuarto Pub is a free publishing service for content created with Quarto.\n\nMust be publicly available\nCannot be larger than 100 MB\nHas a soft limit of 10 GB a month\n\n\n\nTerminal\n\nquarto publish quarto-pub hello.qmd\n\n\n\n\nTerminal\n\n# token created at https://quartopub.com/profile/\nexport QUARTO_PUB_AUTH_TOKEN=\"qpa_k4yWKEmlu5wkvx173Ls\"\n\n# publish to quarto-pub site specified within _publish.yml\nquarto publish quarto-pub\n\n\n\nLet’s try it!"
+  },
+  {
+    "objectID": "ppts/index.html#thank-you",
+    "href": "ppts/index.html#thank-you",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Thank you!",
+    "text": "Thank you!\nI hope that you enjoyed this intro to Quarto!\n\nKeep in touch on Twitter:  ivelasq3.\nRead the Quarto documentation.\nCheck out Awesome Quarto."
+  },
+  {
+    "objectID": "ppts/index.html#acknowledgements",
+    "href": "ppts/index.html#acknowledgements",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nQuarto questions by Marc Dotson\nImprovements in text processing using textrecipes by Emil Hvitfeldt"
+  },
+  {
+    "objectID": "ppts/index.html#quarto-in-100-seconds",
+    "href": "ppts/index.html#quarto-in-100-seconds",
+    "title": "心血管疾病数字疗法实践与进展",
+    "section": "Quarto in 100 seconds",
+    "text": "Quarto in 100 seconds\n\n\n\n\n\n\n\nSource: xvzf on YouTube"
+  },
+  {
+    "objectID": "talk/20221217-csc-DTx-in-cardiology/index.html",
+    "href": "talk/20221217-csc-DTx-in-cardiology/index.html",
+    "title": "CSC2022年会——心血管疾病数字疗法实践与进展",
+    "section": "",
+    "text": "https://ditto504.github.io/quartoblog/slides/20221217-csc.html\n\n\n\n\n\n引文BibTeX@online{李昱熙2022,\n  author = {李昱熙},\n  title = {CSC2022年会——心血管疾病数字疗法实践与进展},\n  date = {2022-12-17},\n  url = {https://ditto504.github.io/quartoblog/talk/20221217-csc-DTx-in-cardiology},\n  langid = {zh}\n}\n请引用这项工作：\n李昱熙. 2022. “CSC2022年会——心血管疾病数字疗法实践与进展.”\nDecember 17, 2022. https://ditto504.github.io/quartoblog/talk/20221217-csc-DTx-in-cardiology."
   }
 ]
