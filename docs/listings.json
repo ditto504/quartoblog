@@ -4,6 +4,7 @@
     "items": [
       "/post/2022-12-06-start/index.html",
       "/post/2021-07-12-beijing-teaching-competition/index.html",
+      "/talk/20221230-shougang-rdn/index.html",
       "/talk/20221217-csc-DTx-in-cardiology/index.html"
     ]
   },
@@ -17,6 +18,7 @@
   {
     "listing": "/talk/index.html",
     "items": [
+      "/talk/20221230-shougang-rdn/index.html",
       "/talk/20221217-csc-DTx-in-cardiology/index.html"
     ]
   }

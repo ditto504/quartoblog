@@ -11,7 +11,7 @@
     "href": "index.html#发言",
     "title": "心血管笔记",
     "section": "发言",
-    "text": "发言\n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年12月17日\n\n\nCSC2022年会——心血管疾病数字疗法实践与进展\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
+    "text": "发言\n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年12月30日\n\n\n首钢学术会——RDN治疗高血压研究进展\n\n\n李昱熙\n\n\n\n\n2022年12月17日\n\n\nCSC2022年会——心血管疾病数字疗法实践与进展\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
   },
   {
     "objectID": "post/2022-12-06-start/index.html",
@@ -277,7 +277,7 @@
     "href": "talk/index.html",
     "title": "发言",
     "section": "",
-    "text": "排序方式\n       缺省\n         \n          日期 - 日期升序\n        \n         \n          日期 - 日期降序\n        \n         \n          标题\n        \n         \n          作者\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年12月17日\n\n\nCSC2022年会——心血管疾病数字疗法实践与进展\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
+    "text": "排序方式\n       缺省\n         \n          日期 - 日期升序\n        \n         \n          日期 - 日期降序\n        \n         \n          标题\n        \n         \n          作者\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n日期\n\n\n标题\n\n\n作者\n\n\n\n\n\n\n2022年12月30日\n\n\n首钢学术会——RDN治疗高血压研究进展\n\n\n李昱熙\n\n\n\n\n2022年12月17日\n\n\nCSC2022年会——心血管疾病数字疗法实践与进展\n\n\n李昱熙\n\n\n\n\n\n\n无匹配项"
   },
   {
     "objectID": "ppts/index.html",
@@ -768,5 +768,509 @@
     "title": "CSC2022年会——心血管疾病数字疗法实践与进展",
     "section": "",
     "text": "https://ditto504.github.io/quartoblog/slides/20221217-csc.html\n\n\n\n\n\n引文BibTeX@online{李昱熙2022,\n  author = {李昱熙},\n  title = {CSC2022年会——心血管疾病数字疗法实践与进展},\n  date = {2022-12-17},\n  url = {https://ditto504.github.io/quartoblog/talk/20221217-csc-DTx-in-cardiology},\n  langid = {zh}\n}\n请引用这项工作：\n李昱熙. 2022. “CSC2022年会——心血管疾病数字疗法实践与进展.”\nDecember 17, 2022. https://ditto504.github.io/quartoblog/talk/20221217-csc-DTx-in-cardiology."
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#纵观全球血压控制率都并不理想",
+    "href": "slides/20221230-shougang-rdn.html#纵观全球血压控制率都并不理想",
+    "title": "RDN治疗高血压研究进展",
+    "section": "纵观全球，血压控制率都并不理想",
+    "text": "纵观全球，血压控制率都并不理想\n\n\n\n\n\n提高血压的知晓率、治疗率和控制率有着更大的意义\n尤其低收入国家更差\n\n\n\n\nFigure 1: The hypertension care cascade by region\n\n\nData are percentages with 95% CIs. Individual points depict the point estimate for each country. ALB=Albania. AZE=Azerbaijan. BGD=Bangladesh. BLZ=Belize. CRI=Costa Rica. IDN=Indonesia. KAZ=Kazakhstan. KGZ=Kyrgyzstan. LSO=Lesotho. MEX=Mexico. MNG=Mongolia. MOZ=Mozambique. NAM=Namibia. NPL=Nepal. ROU=Romania. SYC=Seychelles. TLS=Timor-Leste. UGA=Uganda. ZAN=Zanzibar.\n\n\n\n\n\n\n\nGeldsetzer, P, et al. Lancet. 2019:394;652-662"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#约13高血压病人未依从服用降压药",
+    "href": "slides/20221230-shougang-rdn.html#约13高血压病人未依从服用降压药",
+    "title": "RDN治疗高血压研究进展",
+    "section": "约1/3高血压病人未依从服用降压药",
+    "text": "约1/3高血压病人未依从服用降压药"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#经典研究回顾",
+    "href": "slides/20221230-shougang-rdn.html#经典研究回顾",
+    "title": "RDN治疗高血压研究进展",
+    "section": "经典研究回顾",
+    "text": "经典研究回顾"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#换了个地方管理血压效果完全不同",
+    "href": "slides/20221230-shougang-rdn.html#换了个地方管理血压效果完全不同",
+    "title": "RDN治疗高血压研究进展",
+    "section": "换了个地方管理血压效果完全不同",
+    "text": "换了个地方管理血压效果完全不同"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#主要终点-6个月sbp",
+    "href": "slides/20221230-shougang-rdn.html#主要终点-6个月sbp",
+    "title": "RDN治疗高血压研究进展",
+    "section": "主要终点: 6个月SBP",
+    "text": "主要终点: 6个月SBP\n\n\n\n\n*Mixed linear effects model, with random intercepts for clusters, and adjusted for baseline BP, routine doctor, and high cholesterol. Drop outs were considered to be occur at random."
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#section",
+    "href": "slides/20221230-shougang-rdn.html#section",
+    "title": "RDN治疗高血压研究进展",
+    "section": "",
+    "text": "谢谢！\n\n\n\n\n\n北京大学第一医院"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#数字疗法-digital-therapeutics-dtx",
+    "href": "slides/20221230-shougang-rdn.html#数字疗法-digital-therapeutics-dtx",
+    "title": "RDN治疗高血压研究进展",
+    "section": "数字疗法Digital therapeutics, DTx",
+    "text": "数字疗法Digital therapeutics, DTx\n\n由软件程序驱动，以循证医学为基础的干预方案，用以治疗、管理或预防疾病。数字疗法可以单独使用，也可以与药物、医疗器械或其他疗法配合使用。\n\n\n\n\n\n\nLivongo的数字疗法——临时紧急审批 数字化慢病管理\n\n\nCOVID-19，减少糖尿病患者前往医院导致的防疫设备的损耗，以便医院可以为住院的新冠肺炎患者提供更好的医疗保障。患者可以利用数字疗法在家监测血糖水平。数据可以上传至医疗机构，以便远程管理。\n\n\n\n\n\n\n\nWELLDOC——糖尿病DTx的标杆\n\n\n\n先作为管理软件在临床应用，然后严格通过临床试验获批（试验组VS对照组取得30%管理阳性结果）\n当前包含CGM、蓝牙连接、1型糖尿病胰岛素调节等各种功能\n其1.0版本DiabetesManager和医院EHR对接不仅可以帮助用户跟踪身体状况，还可以通过其专有的自动专家分析系统分析采集的数据，找出趋势以便辅助医生为患者提供教育和行为指导，DiabetesManager系统具有药物依从功能，可安全捕获，存储和实时传输血糖数据\n2017加入美国糖尿病协会的教育指导课程；其主要核心定位是数据测量包括CGM准确，配备胰岛素计算器和药物使用辅助决策，帮助医生完成个体化的数字处方开具"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#esc-2021未服药高血压患者-多中心rct结果",
+    "href": "slides/20221230-shougang-rdn.html#esc-2021未服药高血压患者-多中心rct结果",
+    "title": "RDN治疗高血压研究进展",
+    "section": "ESC 2021：未服药高血压患者多中心RCT结果",
+    "text": "ESC 2021：未服药高血压患者多中心RCT结果\n\n在2021 ESC大会上，Kario代表团队报告了一项随机、对照、多中心、开放标签试验——HERB-DH1关键试验的结果。自2019年12月至2020年6月，日本的12个中心共计纳入390名诊室收缩压140至180 mmHg，24小时收缩压>130 mmHg的高血压患者，且3月内未服用任何降压药物，随机分配到数字治疗干预组（n=199）或对照组（n=191）。\n\n\n\n\nKazuomi Kario, Akihiro Nomura, Noriko Harada, Ayako Okura, Kiyose Nakagawa, Tomoyuki Tanigawa, Eisuke Hida, Efficacy of a digital therapeutics system in the management of essential hypertension: the HERB-DH1 pivotal trial, European Heart Journal, Volume 42, Issue 40, 21 October 2021, Pages 4111–4122, https://doi.org/10.1093/eurheartj/ehab559"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#前期阴性研究的支持",
+    "href": "slides/20221230-shougang-rdn.html#前期阴性研究的支持",
+    "title": "RDN治疗高血压研究进展",
+    "section": "前期阴性研究的支持",
+    "text": "前期阴性研究的支持\n\nIn an exploratory analysis focusing on antihypertensive drug-naïve patients aged <65, the effects of the HERB intervention were significantly greater than the control for reducing 24-hour SBP by ABPM at 16 weeks (adjusted difference: −7.6 mmHg; p = .013; and morning home SBP at 24 weeks (adjusted difference − 6.0 mmHg; p = .012)."
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#研究方案",
+    "href": "slides/20221230-shougang-rdn.html#研究方案",
+    "title": "RDN治疗高血压研究进展",
+    "section": "研究方案",
+    "text": "研究方案"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#数字疗法效果显著",
+    "href": "slides/20221230-shougang-rdn.html#数字疗法效果显著",
+    "title": "RDN治疗高血压研究进展",
+    "section": "数字疗法效果显著",
+    "text": "数字疗法效果显著\n\n\n\n\n\n\n\n在未应用抗高血压药物的情况下，可有效降低24小时动态、家庭和诊室血压。\n\n\n在12周时，组间24小时动态、家庭和诊室收缩压的差异为分别为-2.4（95%置信区间-4.5至-0.3）、-4.3（-6.7至-1.9）和-3.6（-6.2至-1.0）mmHg。 此外，在观察期间显示干预组钠盐摄入明显减少，体重下降明显。24周观察期间未见明显的不良事件。"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#数字疗法对传统诊疗模式的改变",
+    "href": "slides/20221230-shougang-rdn.html#数字疗法对传统诊疗模式的改变",
+    "title": "RDN治疗高血压研究进展",
+    "section": "数字疗法对传统诊疗模式的改变",
+    "text": "数字疗法对传统诊疗模式的改变"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#高血压治疗效果",
+    "href": "slides/20221230-shougang-rdn.html#高血压治疗效果",
+    "title": "RDN治疗高血压研究进展",
+    "section": "高血压治疗效果",
+    "text": "高血压治疗效果"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#高脂血症治疗效果",
+    "href": "slides/20221230-shougang-rdn.html#高脂血症治疗效果",
+    "title": "RDN治疗高血压研究进展",
+    "section": "高脂血症治疗效果",
+    "text": "高脂血症治疗效果"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#年微信公众平台搭建-最早期胸痛中心院前急救网络体系",
+    "href": "slides/20221230-shougang-rdn.html#年微信公众平台搭建-最早期胸痛中心院前急救网络体系",
+    "title": "RDN治疗高血压研究进展",
+    "section": "2015年——微信公众平台搭建最早期胸痛中心院前急救网络体系",
+    "text": "2015年——微信公众平台搭建最早期胸痛中心院前急救网络体系"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#bama研究",
+    "href": "slides/20221230-shougang-rdn.html#bama研究",
+    "title": "RDN治疗高血压研究进展",
+    "section": "BAMA研究",
+    "text": "BAMA研究"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#研究启动前的调研准备",
+    "href": "slides/20221230-shougang-rdn.html#研究启动前的调研准备",
+    "title": "RDN治疗高血压研究进展",
+    "section": "研究启动前的调研准备",
+    "text": "研究启动前的调研准备"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#pci术后患者能从数字疗法中获益",
+    "href": "slides/20221230-shougang-rdn.html#pci术后患者能从数字疗法中获益",
+    "title": "RDN治疗高血压研究进展",
+    "section": "PCI术后患者能从数字疗法中获益",
+    "text": "PCI术后患者能从数字疗法中获益\n\n\n\nLi Y, Gong Y, Zheng B, Fan F, Yi T, Zheng Y, He P, Fang J, Jia J, Zhu Q, Jiang J, Huo Y. Effects on Adherence to a Mobile App-Based Self-management Digital Therapeutics Among Patients With Coronary Heart Disease: Pilot Randomized Controlled Trial. JMIR Mhealth Uhealth. 2022 Feb 15;10(2):e32251."
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#智能手表助力房颤筛查",
+    "href": "slides/20221230-shougang-rdn.html#智能手表助力房颤筛查",
+    "title": "RDN治疗高血压研究进展",
+    "section": "智能手表助力房颤筛查",
+    "text": "智能手表助力房颤筛查"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#数字疗法不应局限于院外管理",
+    "href": "slides/20221230-shougang-rdn.html#数字疗法不应局限于院外管理",
+    "title": "RDN治疗高血压研究进展",
+    "section": "数字疗法不应局限于院外管理",
+    "text": "数字疗法不应局限于院外管理"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#我们的工作依然任重道远",
+    "href": "slides/20221230-shougang-rdn.html#我们的工作依然任重道远",
+    "title": "RDN治疗高血压研究进展",
+    "section": "我们的工作依然任重道远",
+    "text": "我们的工作依然任重道远\n\n\n如何保证数字疗法的可持续性？\nApp vs. SaaS，例如微信小程序？\n亟需建立相关数据标准及生态体系\n院内数据与院外数据联通、O2O，从数据到证据的链条仍需大量工作补齐"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#section-1",
+    "href": "slides/20221230-shougang-rdn.html#section-1",
+    "title": "RDN治疗高血压研究进展",
+    "section": "",
+    "text": "谢谢！\n\n\n\n\n\n北京大学第一医院"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#药物负担及用药依从性差-已成为高血压治疗的重要问题",
+    "href": "slides/20221230-shougang-rdn.html#药物负担及用药依从性差-已成为高血压治疗的重要问题",
+    "title": "RDN治疗高血压研究进展",
+    "section": "药物负担及用药依从性差已成为高血压治疗的重要问题",
+    "text": "药物负担及用药依从性差已成为高血压治疗的重要问题\n\n\n\n从2种降压药增加到3种，加倍了不依从性\n使用5种降压药的患者近50%存在不依从\n6个及以上的绝大多数患者无法依从"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#药物负担及用药依从性差已成为高血压治疗的重要问题",
+    "href": "slides/20221230-shougang-rdn.html#药物负担及用药依从性差已成为高血压治疗的重要问题",
+    "title": "RDN治疗高血压研究进展",
+    "section": "药物负担及用药依从性差已成为高血压治疗的重要问题",
+    "text": "药物负担及用药依从性差已成为高血压治疗的重要问题\n\n\n\n从2种降压药增加到3种，加倍了不依从性\n使用5种降压药的患者近50%存在不依从\n6个及以上的绝大多数患者无法依从"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#高血压器械治疗",
+    "href": "slides/20221230-shougang-rdn.html#高血压器械治疗",
+    "title": "RDN治疗高血压研究进展",
+    "section": "高血压器械治疗",
+    "text": "高血压器械治疗\n\n\n\n\n\n\n第二代RDN器械，弥补了前期不足，并开展了多项临床试验，询证医学证据越来越充足\n除RDN外，其他部分器械治疗有小规模探索研究提示短期有效性，但必须通过后续随机对照研究进一步证实现阶段高血压器械治疗仍应严格限制在有经验和能力的中心开展\n当考虑器械治疗高血压时，应全面考虑患者的病生理因素，充分考量风险-获益及个体化治疗\n\n\n\n\nCardiac neuromodulation therapy: 心脏神经调节疗法\nElectronical baroreflex activation therapy: 颈动脉压力感受器电刺激疗法\nEndovascular baroreflex amplification therapy: MobiusHD植入自膨支架放大颈动脉压力感受器\nTransvenous carotid body ablation: 经静脉颈动脉体消融术\nCentral iliac arteriovenous coupler: 髂动静脉吻合术\n\n\n\n\n\n\nLauder L, Nat Rev Card 2020"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#高血压器械治疗里程碑",
+    "href": "slides/20221230-shougang-rdn.html#高血压器械治疗里程碑",
+    "title": "RDN治疗高血压研究进展",
+    "section": "高血压器械治疗里程碑",
+    "text": "高血压器械治疗里程碑"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#其他高血压器械治疗",
+    "href": "slides/20221230-shougang-rdn.html#其他高血压器械治疗",
+    "title": "RDN治疗高血压研究进展",
+    "section": "其他高血压器械治疗",
+    "text": "其他高血压器械治疗\n\n\n仅有单臂短期疗效证据有待RCT研究进一步证实疗效及安全性\n\n\n\n\n\nCardiac neuromodulation therapy: 心脏神经调节疗法\nElectronical baroreflex activation therapy: 颈动脉压力感受器电刺激疗法\nEndovascular baroreflex amplification therapy: MobiusHD植入自膨支架放大颈动脉压力感受器\nTransvenous carotid body ablation: 经静脉颈动脉体消融术\nCentral iliac arteriovenous coupler: 髂动静脉吻合术\n\n\n\n\n\n\n\n\nLauder L, Nat Rev Card 2020"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#rdn相关著名研究回顾",
+    "href": "slides/20221230-shougang-rdn.html#rdn相关著名研究回顾",
+    "title": "RDN治疗高血压研究进展",
+    "section": "RDN相关著名研究回顾",
+    "text": "RDN相关著名研究回顾"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#symplicity-htn-12-rdn术后血压明显且持续的下降",
+    "href": "slides/20221230-shougang-rdn.html#symplicity-htn-12-rdn术后血压明显且持续的下降",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SYMPLICITY HTN-1&2RDN术后血压明显且持续的下降",
+    "text": "SYMPLICITY HTN-1&2RDN术后血压明显且持续的下降\n\n\n\n\n\n\nKrum H, et al. Lancet. 2014;383:622–629.\nSYMPLICITY HTN-2 Investigations. Lancet. 2010;376:1903–1909"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#射频消融rdn的临床研究里程碑-symplicity-htn-3临床研究",
+    "href": "slides/20221230-shougang-rdn.html#射频消融rdn的临床研究里程碑-symplicity-htn-3临床研究",
+    "title": "RDN治疗高血压研究进展",
+    "section": "射频消融RDN的临床研究里程碑SYMPLICITY HTN-3临床研究",
+    "text": "射频消融RDN的临床研究里程碑SYMPLICITY HTN-3临床研究"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#射频消融rdn术后三年长期显著-15.6mmhg动态收缩压降压效果",
+    "href": "slides/20221230-shougang-rdn.html#射频消融rdn术后三年长期显著-15.6mmhg动态收缩压降压效果",
+    "title": "RDN治疗高血压研究进展",
+    "section": "射频消融RDN术后三年长期显著15.6mmHg动态收缩压降压效果",
+    "text": "射频消融RDN术后三年长期显著15.6mmHg动态收缩压降压效果"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#htn-3后",
+    "href": "slides/20221230-shougang-rdn.html#htn-3后",
+    "title": "RDN治疗高血压研究进展",
+    "section": "HTN-3后",
+    "text": "HTN-3后\n\n\n美敦力RDN临床研究进入SPYRALHTN时代，是全球范围最大的RDN临床研究，累计入组超4000名患者，有力证明了射频消融RDN的有效性、安全性和持久有效性"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#站在巨人的肩膀上",
+    "href": "slides/20221230-shougang-rdn.html#站在巨人的肩膀上",
+    "title": "RDN治疗高血压研究进展",
+    "section": "站在巨人的肩膀上",
+    "text": "站在巨人的肩膀上\n\n\n\n\n\nBöhm M, Lancet 2020\nTownsend RR, Lancet 2017"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-off-med研究设计",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-off-med研究设计",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-OFF MED研究设计",
+    "text": "SPYRAL HTN-OFF MED研究设计\n\n\n\n\nBöhm M, Lancet 2020"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-off-med-全队列研究达到安全性终点",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-off-med-全队列研究达到安全性终点",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-OFF MED全队列研究达到安全性终点",
+    "text": "SPYRAL HTN-OFF MED全队列研究达到安全性终点"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-off-med主要结果",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-off-med主要结果",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-OFF MED主要结果",
+    "text": "SPYRAL HTN-OFF MED主要结果\n\n\n\n\nBöhm M, Lancet 2020"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-off-med主要结果-1",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-off-med主要结果-1",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-OFF MED主要结果",
+    "text": "SPYRAL HTN-OFF MED主要结果\n\n\n\n\nBöhm M, Lancet 2020"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-off-med",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-off-med",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-OFF MED",
+    "text": "SPYRAL HTN-OFF MED\n\n总结：SPYRAL HTN-OFF MED全队列研究有力证明了射频消融RDN独立于药物作用之外的有效性和安全性\n\n\n研究将主要终点设置为3个月：\n\n\n一方面是出于伦理及患者安全考虑，3个月后患者可以开始用药；\n另一方面，既往 RDN 相关研究显示 3 个月后血压可以进一步降低 1,2\n\n\n由于SPYRAL HTN-OFF MED全队列研究纳入的是不服用药物的高血压患者，因此能充分证明美敦力射频消融RDN独立于药物之外的显著降压效果及安全性，切实给高血压患者带来临床获益；\n药物治疗目前仍是高血压的主要治疗手段，为持续证明射频消融RDN在药物治疗外的降压获益与安全性， SPYRAL HTN-ON MED研究应运而生。\n\n\n\n1 Kandzari D, et al. Lancet. 2018;391(10137):2346-2355.  2 Mahfoud F. EuroPCR 2019"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#radiance-solo研究",
+    "href": "slides/20221230-shougang-rdn.html#radiance-solo研究",
+    "title": "RDN治疗高血压研究进展",
+    "section": "RADIANCE SOLO研究",
+    "text": "RADIANCE SOLO研究\n\n\n\n\nMahfoud. Lancet.2018"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#难治高血压acc.21-radiance-htn-trio",
+    "href": "slides/20221230-shougang-rdn.html#难治高血压acc.21-radiance-htn-trio",
+    "title": "RDN治疗高血压研究进展",
+    "section": "难治高血压：ACC.21 RADIANCE-HTN TRIO",
+    "text": "难治高血压：ACC.21 RADIANCE-HTN TRIO\n\n\n\n\nAzizi, Lancet 2021"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#难治高血压-acc.21-radiance-htn-trio",
+    "href": "slides/20221230-shougang-rdn.html#难治高血压-acc.21-radiance-htn-trio",
+    "title": "RDN治疗高血压研究进展",
+    "section": "难治高血压：ACC.21 RADIANCE-HTN TRIO",
+    "text": "难治高血压：ACC.21 RADIANCE-HTN TRIO\n\n\n\nAzizi, Lancet 2021"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#研究流程及入选标准",
+    "href": "slides/20221230-shougang-rdn.html#研究流程及入选标准",
+    "title": "RDN治疗高血压研究进展",
+    "section": "研究流程及入选标准",
+    "text": "研究流程及入选标准\n\n\n\n\n\nAzizi, Lancet 2021"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#周三联降压后的基线血压",
+    "href": "slides/20221230-shougang-rdn.html#周三联降压后的基线血压",
+    "title": "RDN治疗高血压研究进展",
+    "section": "4周三联降压后的基线血压",
+    "text": "4周三联降压后的基线血压\n\n\n\n\nAzizi, Lancet 2021"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#主要终点2个月时-日间abpm-sbp变化",
+    "href": "slides/20221230-shougang-rdn.html#主要终点2个月时-日间abpm-sbp变化",
+    "title": "RDN治疗高血压研究进展",
+    "section": "主要终点：2个月时\u000b日间ABPM-SBP变化",
+    "text": "主要终点：2个月时\u000b日间ABPM-SBP变化\n\n\n\n\nAzizi, Lancet 2021"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#主要终点2个月时日间abpm-sbp变化",
+    "href": "slides/20221230-shougang-rdn.html#主要终点2个月时日间abpm-sbp变化",
+    "title": "RDN治疗高血压研究进展",
+    "section": "主要终点：2个月时日间ABPM-SBP变化",
+    "text": "主要终点：2个月时日间ABPM-SBP变化\n\n\n\n\nAzizi, Lancet 2021"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#个月时abpm",
+    "href": "slides/20221230-shougang-rdn.html#个月时abpm",
+    "title": "RDN治疗高血压研究进展",
+    "section": "2个月时ABPM",
+    "text": "2个月时ABPM\n\n\n\n\nAzizi, Lancet 2021"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med临床研究设计",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med临床研究设计",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED临床研究设计",
+    "text": "SPYRAL HTN-ON MED临床研究设计"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-pilot-6个月主要终点及3年长期随访数据",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-pilot-6个月主要终点及3年长期随访数据",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED PILOT6个月主要终点及3年长期随访数据",
+    "text": "SPYRAL HTN-ON MED PILOT6个月主要终点及3年长期随访数据"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med研究-6个月内药物负荷的变化情况",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med研究-6个月内药物负荷的变化情况",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED研究6个月内药物负荷的变化情况",
+    "text": "SPYRAL HTN-ON MED研究6个月内药物负荷的变化情况"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-6个月-有效性终点-概率分析frequentist",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-6个月-有效性终点-概率分析frequentist",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED 6个月有效性终点-概率分析（Frequentist）",
+    "text": "SPYRAL HTN-ON MED 6个月有效性终点-概率分析（Frequentist）"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-6个月-有效性终点-胜率分析win-ratio",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-6个月-有效性终点-胜率分析win-ratio",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED 6个月有效性终点-胜率分析（Win Ratio）",
+    "text": "SPYRAL HTN-ON MED 6个月有效性终点-胜率分析（Win Ratio）"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-全队列研究1个月主要安全性终点",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med-全队列研究1个月主要安全性终点",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED全队列研究1个月主要安全性终点",
+    "text": "SPYRAL HTN-ON MED全队列研究1个月主要安全性终点"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED",
+    "text": "SPYRAL HTN-ON MED\n\n\n总结： SPYRAL HTN-ON MED研究显示与既往RDN研究一致的有效性和安全性\n\n\n试图在ON MED研究中严格规范患者服药的难度非常大，特别是ON MED全队列研究的随访80%都是在COVID-19期间完成；\n虽然SPYRAL HTN-ON MED全队列研究因假手术擅自增加服药而未达到主要有效性终点，但结合SPYRAL HTN-OFF MED全队列研究等来看，仍旧证明了射频消融RDN降低血压的一致的有效性；\nSPYRAL HTN-ON MED Pilot研究结果证实射频消融RDN与假手术组相比，降压具有长期有效性；\n射频消融RDN通过SPYRAL HTN-ON MED全队列研究充分证实其安全性，不损伤肾动脉及肾功能； 5.高血压微创介入治疗的初衷并不是取代药物治疗，而是与药物治疗一同，给高血压患者带来全新的治疗手段，助力提升血压达标率，给患者带来更多临床获益。"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#真实世界数据-global-symplicity-registry-gsr-define",
+    "href": "slides/20221230-shougang-rdn.html#真实世界数据-global-symplicity-registry-gsr-define",
+    "title": "RDN治疗高血压研究进展",
+    "section": "真实世界数据Global SYMPLICITY Registry (GSR) DEFINE",
+    "text": "真实世界数据Global SYMPLICITY Registry (GSR) DEFINE"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#美敦力gsr-define-全球登记研究所用器械",
+    "href": "slides/20221230-shougang-rdn.html#美敦力gsr-define-全球登记研究所用器械",
+    "title": "RDN治疗高血压研究进展",
+    "section": "美敦力GSR DEFINE全球登记研究所用器械",
+    "text": "美敦力GSR DEFINE全球登记研究所用器械"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#射频消融rdn在高血压患者人群中-显示持久的降压效果",
+    "href": "slides/20221230-shougang-rdn.html#射频消融rdn在高血压患者人群中-显示持久的降压效果",
+    "title": "RDN治疗高血压研究进展",
+    "section": "射频消融RDN在高血压患者人群中显示持久的降压效果",
+    "text": "射频消融RDN在高血压患者人群中显示持久的降压效果"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#射频消融rdn患者术后-药物负荷降低且有更优的血压达标率",
+    "href": "slides/20221230-shougang-rdn.html#射频消融rdn患者术后-药物负荷降低且有更优的血压达标率",
+    "title": "RDN治疗高血压研究进展",
+    "section": "射频消融RDN患者术后药物负荷降低，且有更优的血压达标率",
+    "text": "射频消融RDN患者术后药物负荷降低，且有更优的血压达标率"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#射频消融rdn术后-肾功能与肾动脉的长期安全性",
+    "href": "slides/20221230-shougang-rdn.html#射频消融rdn术后-肾功能与肾动脉的长期安全性",
+    "title": "RDN治疗高血压研究进展",
+    "section": "射频消融RDN术后肾功能与肾动脉的长期安全性",
+    "text": "射频消融RDN术后肾功能与肾动脉的长期安全性"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#我们的经验symplicity国内特许使用",
+    "href": "slides/20221230-shougang-rdn.html#我们的经验symplicity国内特许使用",
+    "title": "RDN治疗高血压研究进展",
+    "section": "我们的经验：Symplicity国内特许使用",
+    "text": "我们的经验：Symplicity国内特许使用"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#极度扭曲的肾动脉rdn操控性良好",
+    "href": "slides/20221230-shougang-rdn.html#极度扭曲的肾动脉rdn操控性良好",
+    "title": "RDN治疗高血压研究进展",
+    "section": "极度扭曲的肾动脉：RDN操控性良好",
+    "text": "极度扭曲的肾动脉：RDN操控性良好"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#rdn降压效果如何",
+    "href": "slides/20221230-shougang-rdn.html#rdn降压效果如何",
+    "title": "RDN治疗高血压研究进展",
+    "section": "RDN降压效果如何？",
+    "text": "RDN降压效果如何？\n\n\n\n\nLauder L, Nat Rev Card 2020"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#off-med研究中有近29的病人-的血压没有降低反而有所升高",
+    "href": "slides/20221230-shougang-rdn.html#off-med研究中有近29的病人-的血压没有降低反而有所升高",
+    "title": "RDN治疗高血压研究进展",
+    "section": "OFF-Med研究中有近29%的病人的血压没有降低反而有所升高",
+    "text": "OFF-Med研究中有近29%的病人的血压没有降低反而有所升高\n\n\n\n\n\n\n\n\n无法确定肾交感神经的位置\n盲目消融的结果\n需要标测肾神经/选择性消融去除肾交感神经"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#无论是rf超声酒精-rdn应答率只有60-70",
+    "href": "slides/20221230-shougang-rdn.html#无论是rf超声酒精-rdn应答率只有60-70",
+    "title": "RDN治疗高血压研究进展",
+    "section": "无论是RF、超声、酒精RDN应答率只有60-70%",
+    "text": "无论是RF、超声、酒精RDN应答率只有60-70%"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#国内新rdn器械研发如火如荼",
+    "href": "slides/20221230-shougang-rdn.html#国内新rdn器械研发如火如荼",
+    "title": "RDN治疗高血压研究进展",
+    "section": "国内新RDN器械研发如火如荼",
+    "text": "国内新RDN器械研发如火如荼"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#clinical-evidences-hot-spot",
+    "href": "slides/20221230-shougang-rdn.html#clinical-evidences-hot-spot",
+    "title": "RDN治疗高血压研究进展",
+    "section": "Clinical Evidences: Hot Spot",
+    "text": "Clinical Evidences: Hot Spot"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#clinical-evidence-cold-spot",
+    "href": "slides/20221230-shougang-rdn.html#clinical-evidence-cold-spot",
+    "title": "RDN治疗高血压研究进展",
+    "section": "Clinical Evidence: Cold Spot",
+    "text": "Clinical Evidence: Cold Spot\n\n\n\n肾动脉周围不仅有交感神经，也有副交感神经\n肾神经标测/选择性消融可能更重要"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#标测肾神经选择性rdn双重功能",
+    "href": "slides/20221230-shougang-rdn.html#标测肾神经选择性rdn双重功能",
+    "title": "RDN治疗高血压研究进展",
+    "section": "标测肾神经/选择性RDN双重功能",
+    "text": "标测肾神经/选择性RDN双重功能"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#我国未来rdn亟待规范化推广",
+    "href": "slides/20221230-shougang-rdn.html#我国未来rdn亟待规范化推广",
+    "title": "RDN治疗高血压研究进展",
+    "section": "我国未来RDN亟待规范化推广",
+    "text": "我国未来RDN亟待规范化推广"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#rdn中国专家立场文件",
+    "href": "slides/20221230-shougang-rdn.html#rdn中国专家立场文件",
+    "title": "RDN治疗高血压研究进展",
+    "section": "RDN中国专家立场文件",
+    "text": "RDN中国专家立场文件"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#我们的任务依然艰巨",
+    "href": "slides/20221230-shougang-rdn.html#我们的任务依然艰巨",
+    "title": "RDN治疗高血压研究进展",
+    "section": "我们的任务依然艰巨！",
+    "text": "我们的任务依然艰巨！"
+  },
+  {
+    "objectID": "slides/20221230-shougang-rdn.html#spyral-htn-on-med总结",
+    "href": "slides/20221230-shougang-rdn.html#spyral-htn-on-med总结",
+    "title": "RDN治疗高血压研究进展",
+    "section": "SPYRAL HTN-ON MED总结",
+    "text": "SPYRAL HTN-ON MED总结\n\n\nSPYRAL HTN-ON MED研究显示与既往RDN研究一致的有效性和安全性\n\n\n试图在ON MED研究中严格规范患者服药的难度非常大，特别是ON MED全队列研究的随访80%都是在COVID-19期间完成；\n虽然SPYRAL HTN-ON MED全队列研究因假手术擅自增加服药而未达到主要有效性终点，但结合SPYRAL HTN-OFF MED全队列研究等来看，仍旧证明了射频消融RDN降低血压的一致的有效性；\nSPYRAL HTN-ON MED Pilot研究结果证实射频消融RDN与假手术组相比，降压具有长期有效性；\n射频消融RDN通过SPYRAL HTN-ON MED全队列研究充分证实其安全性，不损伤肾动脉及肾功能； 5.高血压微创介入治疗的初衷并不是取代药物治疗，而是与药物治疗一同，给高血压患者带来全新的治疗手段，助力提升血压达标率，给患者带来更多临床获益。"
+  },
+  {
+    "objectID": "talk/20221230-shougang-rdn/index.html",
+    "href": "talk/20221230-shougang-rdn/index.html",
+    "title": "首钢学术会——RDN治疗高血压研究进展",
+    "section": "",
+    "text": "https://ditto504.github.io/quartoblog/slides/20221230-shougang-rdn.html\n\n\n\n\n\n引文BibTeX@online{李昱熙2022,\n  author = {李昱熙},\n  title = {首钢学术会——RDN治疗高血压研究进展},\n  date = {2022-12-30},\n  url = {https://ditto504.github.io/quartoblog/talk/20221230-shougang-rdn},\n  langid = {zh}\n}\n请引用这项工作：\n李昱熙. 2022. “首钢学术会——RDN治疗高血压研究进展.” December\n30, 2022. https://ditto504.github.io/quartoblog/talk/20221230-shougang-rdn."
   }
 ]
