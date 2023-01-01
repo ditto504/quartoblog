@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -142,28 +142,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="dropdown-header">
- 李昱熙（LI, Yuxi, MD）</li>
+ <span class="menu-text">李昱熙（LI, Yuxi, MD）</span></li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">关于</a>
+    <a class="nav-link active" href="./about.html" aria-current="page">
+ <span class="menu-text">关于</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./post/">文章</a>
+    <a class="nav-link" href="./post/">
+ <span class="menu-text">文章</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talk/">发言</a>
+    <a class="nav-link" href="./talk/">
+ <span class="menu-text">发言</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./bio.html">简历</a>
+    <a class="nav-link" href="./bio.html">
+ <span class="menu-text">简历</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.zotero.org/yuxili">发表文章</a>
+    <a class="nav-link" href="https://www.zotero.org/yuxili">
+ <span class="menu-text">发表文章</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/ditto504"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -203,10 +208,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
   </div>
   <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>这里是一些介绍，看一下字体的效果</p>
+<p>这是李昱熙的个人主页。曾经用过各种博客，也用wordpress建过自己的网站，这个用Quarto建立的网站希望是最后一个，能留下一些可以经过历史长河考验的内容。目前在北京大学第一医院做心内科医生，亚专业方向是冠心病和高血压介入诊疗，毕竟接受过规范的内科学与心血管专科培训，对与心血管相关的疑难疾病也很有兴趣。热爱教学，坚信教学相长，推崇从临床、从病人、从实践中学习。研究方向具体见下文。个人非常满意所从事的医教研工作，交叉复合背景也带来了许多与传统临床医生不一样的体验。个人日常爱好音乐、旅行、咖啡、美食。</p>
 <section id="李昱熙li-yuxi" class="level2">
 <h2 data-anchor-id="李昱熙li-yuxi">李昱熙（LI, Yuxi）</h2>
-<p>我的研究方向</p>
+<p>我的研究方向主线围绕在冠脉及高血压介入诊疗与医学信息学两个大方向。冠心病介入不必多说，高血压介入围绕肾动脉狭窄、RDN及原发性醛固酮增多等疾病展开。接受过规范的临床研究方法学培训，也拥有相当的研究实践经验，并具备数据清洗处理、统计分析能力，这个主页也是可重复（reproducible）研究的成果，自诩半个数据科学家。围绕医学信息学方向的研究，最终目的是服务临床，一是充分将EHR数据利用，二是借助信息化工具解决临床问题。</p>
 <section id="研究领域" class="level3">
 <h3 data-anchor-id="研究领域">研究领域</h3>
 <ul>
@@ -266,7 +271,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "已复制");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "已复制");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -353,24 +375,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp(/https:\/\/ditto504\.github\.io\/quartoblog/);
@@ -378,7 +418,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -403,11 +443,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">      href: https://github.com/ditto504</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>这里是一些介绍，看一下字体的效果</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>这是李昱熙的个人主页。曾经用过各种博客，也用wordpress建过自己的网站，这个用Quarto建立的网站希望是最后一个，能留下一些可以经过历史长河考验的内容。目前在北京大学第一医院做心内科医生，亚专业方向是冠心病和高血压介入诊疗，毕竟接受过规范的内科学与心血管专科培训，对与心血管相关的疑难疾病也很有兴趣。热爱教学，坚信教学相长，推崇从临床、从病人、从实践中学习。研究方向具体见下文。个人非常满意所从事的医教研工作，交叉复合背景也带来了许多与传统临床医生不一样的体验。个人日常爱好音乐、旅行、咖啡、美食。</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## 李昱熙（LI, Yuxi）</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>我的研究方向</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>我的研究方向主线围绕在冠脉及高血压介入诊疗与医学信息学两个大方向。冠心病介入不必多说，高血压介入围绕肾动脉狭窄、RDN及原发性醛固酮增多等疾病展开。接受过规范的临床研究方法学培训，也拥有相当的研究实践经验，并具备数据清洗处理、统计分析能力，这个主页也是可重复（reproducible）研究的成果，自诩半个数据科学家。围绕医学信息学方向的研究，最终目的是服务临床，一是充分将EHR数据利用，二是借助信息化工具解决临床问题。</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### 研究领域</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
